@@ -17,9 +17,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a 4th year undergraduate at Columbia University majoring in Physics and Mathematics. 
+I am a 4th year undergraduate at Columbia University majoring in Physics and Mathematics, doing research in theoretical condensed matter physics. I am particularly interested in topological phases of matters, superconductivity, and strongly correlated electron materials. 
 
-`Chiu Fan Bowen` is my official name: Chiu Fan is my Chinese first name, 超凡; Bowen is the English name my parents first gave me, but now I go by Leo. 
+Chiu Fan Bowen is my official name: Chiu Fan is my Chinese first name, 超凡; Bowen is the English name my parents first gave me, but now I go by Leo. 
 The different parts and versions of my name reflects the places I have lived: I was born and raised in Hong Kong. My family moved to Long Island, New York when I was 15, and now we are living in Kansas. In the meantime, I am attending college in NYC! 
 
 Physics is a big part of my life, starting from the first time I see some of the coolest optical illusions in science museums as a kid. Not surprisingly, I jumped at the chance of doing research in the interaction between light and matters in my sophomore year of high school, and have been exploring the rich landscape of condensed matter physics every since.
