@@ -19,7 +19,7 @@ social: true  # includes social icons at the bottom of the page
 
 I am a 4th year undergraduate at Columbia University majoring in Physics and Mathematics, doing research in theoretical condensed matter physics. I am particularly interested in topological phases of matters, superconductivity, and strongly correlated electron materials. 
 
-When I am not doing physics (which is becoming increasingly rare!), I like playing the flute, coming up with random melodies, and playing strategy games. And here is a [random rock](https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=leolo) in our solar system.
+When I am not doing physics (which is becoming increasingly rare!), I like playing the flute, coming up with random melodies, and biking. And here is a [random rock](https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=leolo) in our solar system.
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
