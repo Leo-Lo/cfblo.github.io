@@ -79,7 +79,7 @@ panelbear_analytics: XXXXXXXXX # panelbear analytics site ID
 # -----------------------------------------------------------------------------
 
 blog_name: Condensed Thoughts  # your blog must have a name for it to show up in the nav bar
-blog_description: Infrequent posts of a condensed matter physicist-in-training
+blog_description: On physics, math, and other interesting things
 permalink: /blog/:year/:title/
 
 # Pagination
