@@ -1,18 +1,16 @@
-"Adams":
-  - firstname: ["Edwin", "E.", "E. P.", "Edwin Plimpton"]
-    url: https://en.wikipedia.org/wiki/Edwin_Plimpton_Adams
+"Basov":
+  - firstname: ["Dmitri", "D.", "D. N."]
+    url: https://infrared.cni.columbia.edu/basov
 
-"Podolsky":
-  - firstname: ["Boris", "B.", "B. Y.", "Boris Yakovlevich"]
-    url: https://en.wikipedia.org/wiki/Boris_Podolsky
+"Nevidomskyy":
+  - firstname: ["Andriy", "Andriy H."]
+    url: https://profiles.rice.edu/faculty/andriy-nevidomskyy
 
-"Rosen":
-  - firstname: ["Nathan", "N."]
-    url: https://en.wikipedia.org/wiki/Nathan_Rosen
+"Po":
+  - firstname: ["Hoi Chun"]
+    url: https://physics.ust.hk/eng/people_detail.php?pplcat=1&id=613
 
-"Bach": 
-  - firstname: ["Johann Sebastian", "J. S."]
-    url: https://en.wikipedia.org/wiki/Johann_Sebastian_Bach
+"McCleod":
+  - firstname: ["Alexander S", "A. S.", "Alexander"]
+    url: https://cse.umn.edu/physics/alex-mcleod
 
-  - firstname: ["Carl Philipp Emanuel", "C. P. E."]
-    url: https://en.wikipedia.org/wiki/Carl_Philipp_Emanuel_Bach
