@@ -26,7 +26,7 @@ Physics is a big part of my life, starting from the first time I see some of the
 
 When I am not doing physics (which is becoming increasingly rare!), I like playing the flute, coming up with random melodies, and playing strategy games.
 
-And here is a [random rock](https://ssd.jpl.nasa.gov/sbdb.cgi?orb=1;sstr=34249) in our solar system.
+And here is a [random rock](https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=leolo) in our solar system.
 
 
 
