@@ -185,7 +185,7 @@ scholar:
   last_name: Lo
   first_name: [Chiu Fan Bowen, ]
 
-  style: apa
+  style: american-physics-society
   locale: en
 
   source: /_bibliography/
