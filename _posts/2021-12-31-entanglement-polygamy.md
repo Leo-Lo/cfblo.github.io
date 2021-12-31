@@ -2,23 +2,47 @@
 layout: post
 title: Entanglement polygamy is possible for qudits
 date: 2021-12-31
-description: an example of a blog post with some math
-tags: quantum information
+description: 
+tags: quantum-information draft
 categories: physics
 ---
 
+(Warning: This post is incomplete)
+
 *Assume reader background knowledge: quantum mechanics, 2-state system, density matrix formalism*
 
+Some convention to get out of the way: For a qubits, the two possible states are $$\ket{\uparrow}$$ and $$\ket{\downarrow}$$ such that $$S_z \ket{\uparrow} = \frac{\hbar}{2} \ket{\uparrow}$$ and $$S_z \ket{\downarrow} = -\frac{\hbar}{2} \ket{\downarrow}$$. For multi-partite system
+
+# Intro
+
 In condensed matter or quantum information textbooks, you may have encountered the concept [**entanglement monogamy**](https://en.wikipedia.org/wiki/Monogamy_of_entanglement), which states that there can be at most two qubits that are maximally entangled; i.e. if two qubits are maximally entangled, you cannot entangle them with additional qubits. 
+
+
+# Maximally entangled defined
 
 Background knowledge: what does it mean for 2 qubits to be maximally entangled?
 There are two ways to show that 2 qubits are maximally entangled. Let $$\ket{\psi}$$ be the state of interest. 
 
-1) One way is to measure the spin-spin correlation function $$\bra{\psi} S_i\otimes S_i \ket{\psi}$$ in all spatial directions. If the state is maximally entangled, then the correlation function is 
+1) One way is to measure the spin-spin correlation function $$\bra{\psi} S_i\otimes S_i \ket{\psi}$$ in all 3 spatial directions ($$i=1,2,3$$) and see if the correlation function is maximally in *all 3* spatial directions. 
+
+2) Another way is to look at the reduced density matrix for each of the particle, then calculate whether the corresponding Von Neumann entropy is maximized, i.e. that of a uniform probability distribution.
+
+
+## Example: The Bell state
+
+I will now show that one of the [Bell states](https://en.wikipedia.org/wiki/Bell_state) (sometimes also called the EPR pairs)
+
+\begin{equation}
+\ket{EPR}= \frac{1}{\sqrt{2}}\left(\ket{00}+\ket{11}\right)
+\end{equation}
+
+is a maximally entangled state, using both approach mentioned above. 
+
+
+### 1st approach: spin-spin correlation function
 
 
 
-I will show that one of the Einstein-Pedolsky-Rosen (EPR) state 
 
 
 
@@ -33,9 +57,15 @@ Since entanglement monogamy rules out qubits
 
 
 
-\begin{equation}
-\label{eq:cauchy-schwarz}
-\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
-\end{equation}
 
-and by adding `\label{...}` inside the equation environment, we can now refer to the equation using `\eqref`.
+
+
+
+
+
+
+
+
+
+
+
