@@ -16,9 +16,6 @@ bibliography:
 toc:
   - name: Intro
   - name: Maximally entangled defined
-    - name: Example: The Bell state
-      - name: 1st approach: spin-spin correlation function
-      - name: 2nd approach: Von Neumann entropy of reduced density matrices
   - name: How to maximally entangle 3 quantum particles?
 
 
