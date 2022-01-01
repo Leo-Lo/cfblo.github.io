@@ -1,12 +1,32 @@
 ---
-layout: post
+layout: distill
 title: Entanglement polygamy is possible for qudits
-date: 2021-12-31
-description: 
+description: an example of a distill-style blog post and main elements
 tags: quantum-information draft exposition
 categories: physics
 comments: true
----
+date: 2021-05-22
+
+authors:
+  - name: Leo Lo
+    url: "https://leo-lo.github.io"
+    affiliations:
+      name: Columbia University
+
+bibliography: 
+
+toc:
+  - name: Intro
+  - name: Maximally entangled defined
+  subsections:
+    - name: Example: The Bell state
+    subsections:
+      - name: 1st approach: spin-spin correlation function
+      - name: 2nd approach: Von Neumann entropy of reduced density matrices
+  - name: How to maximally entangle 3 quantum particles?
+
+
+
 
 (Warning: This post is incomplete)
 
@@ -64,10 +84,6 @@ where the indexing of the 4 entries are $$\ket{00},\ket{01},\ket{10},\ket{11}$$.
 
 
 ### 2nd approach: Von Neumann entropy of reduced density matrices
-
-
-
-
 
 
 # How to maximally entangle 3 quantum particles?

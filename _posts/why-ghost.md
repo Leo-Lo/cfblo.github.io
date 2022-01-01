@@ -44,7 +44,7 @@ Next, we want to represent everything in the language of Feynman diagrams, i.e. 
 where $$a,b$$ are Grassmann variables (think of them as fermionic field at the classical level). Applying this to our case, we have 
 
 \begin{equation}
-\int \prod D\bar{c}_i \prod Dc_j e^{\bar{c}_i \mathcal F_{ij} c_j} = \det (\mathcal F)
+\int D \bar{c}_i Dc_j e^{\bar{c}_i \mathcal{F}_{ij} c_j} = \det (\mathcal{F})
 \end{equation}
 
 where $$c, \bar{c}$$ are Grassmann-valued fields: $$c$$ is the ghost and $$\bar{c}$$ is the anti-ghost field. Therefore, in order to express the determinant factor as a Gaussian integral (which is necesssary for the gauge fixing condition to transform properly under gauge transformation), we are forced to introduce ghost and anti-ghost. 
