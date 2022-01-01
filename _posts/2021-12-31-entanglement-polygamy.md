@@ -17,6 +17,8 @@ Some convention to get out of the way: For a qubits, the two possible states are
 
 In condensed matter or quantum information textbooks, you may have encountered the concept [**entanglement monogamy**](https://en.wikipedia.org/wiki/Monogamy_of_entanglement), which states that there can be at most two qubits that are maximally entangled; i.e. if two qubits are maximally entangled, you cannot entangle them with additional qubits. 
 
+Now, it is easy to think that quantum particles in general exhibit entanglement monogamy; this turns out to be wrong. I made this mistake, that's why I am writing this post to repend for my sins. In short, entanglement monogamy only applies to *qubits*, which are particles with two possible states. To circumvent entanglement monogamy, we will instead use *qu**d**its*, which are particles with $$d$$ possible states. Then, it is in fact possible to maximally entangled arbitrary number of particles. I call this **entanglement polygamy**. This is the result we will arrive at by the end of this blogpost.
+
 
 # Maximally entangled defined
 
@@ -36,23 +38,42 @@ I will now show that one of the [Bell states](https://en.wikipedia.org/wiki/Bell
 \ket{EPR}= \frac{1}{\sqrt{2}}\left(\ket{00}+\ket{11}\right)
 \end{equation}
 
-is a maximally entangled state, using both approach mentioned above. 
+is a maximally entangled state, using both approach mentioned above. I will use the density matrix formalism, since the second approach (which involves calculating the Von Neumann entropy) hinges on the density matrix formalism. In this formalism, the density matrix representing the state is 
+
+\begin{equation}
+\rho = \ket{EPR}\bra{EPR} = \frac{1}{2}
+\begin{pmatrix}
+1 & 0 & 0 & 1\\
+0 & 0 & 0 & 0\\
+0 & 0 & 0 & 0\\
+1 & 0 & 0 & 1\\
+\end{pmatrix}
+\end{equation}
+
+where the indexing of the 4 entries are $$\ket{00},\ket{01},\ket{10},\ket{11}$$. 
 
 
 ### 1st approach: spin-spin correlation function
 
+\begin{align*}
+3&= 2\\
+2&=3
+\end{align*}
+
+
+
+### 2nd approach: Von Neumann entropy of reduced density matrices
 
 
 
 
 
 
+# How to maximally entangle 3 quantum particles?
 
-Now, it is easy to think that quantum particles in general exhibit entanglement monogamy; this turns out to be wrong. I made this mistake, that's why I am writing this post to repend for my sins. In short, entanglement monogamy only applies to qubits, which are particles with two possible states. To circumvent entanglement monogamy, we will instead use qu**d**its, which are particles with $$d$$ possible states. 
+The idea I have is to not restrict ourselves to just 
 
-that it is in fact possible to maximally entangled arbitrary number of particles. I call this **entanglement polygamy**. 
 
-Since entanglement monogamy rules out qubits 
 
 
 
