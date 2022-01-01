@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: Entanglement polygamy is possible for qudits
+title: Entanglement polygamy is possible for qudits distill
 date: 2021-12-31
 description: Or, given more room, quantum particles enjoy more company.
 tags: quantum-information draft exposition
@@ -16,6 +16,7 @@ authors:
 toc:
   - name: Intro
   - name: Maximally entangled defined
+    - name: Bell state example
   - name: Maximally entangle 3 quantum particles
 
 ---
@@ -45,7 +46,7 @@ There are two ways to show that 2 qubits are maximally entangled. Let $$\ket{\ps
 2) Another way is to look at the reduced density matrix for each of the particle, then calculate whether the corresponding Von Neumann entropy is maximized, i.e. that of a uniform probability distribution.
 
 
-### Example: The Bell state
+### Bell state example
 
 I will now show that one of the [Bell states](https://en.wikipedia.org/wiki/Bell_state) (sometimes also called the EPR pairs)
 
