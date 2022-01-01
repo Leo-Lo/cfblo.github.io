@@ -16,7 +16,7 @@ authors:
 toc:
   - name: Intro
   - name: Maximally entangled defined
-    - name: Bell state example
+  	- name: Bell state example
   - name: Maximally entangle 3 quantum particles
 
 ---
