@@ -17,7 +17,7 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am a 4th year undergraduate at Columbia University majoring in Physics and Mathematics, doing research in theoretical condensed matter physics. I am broadly interested in topological phases of matters, superconductivity, and strongly correlated electron materials. 
+I am a 4th year undergraduate at Columbia University majoring in Physics and Mathematics, doing research in theoretical condensed matter physics. I am broadly interested in topological phases of matters, superconductivity, and strongly correlated electron materials. Click [here](../assets/pdf/Resume_CFBLo.pdf) for my resume.
 
 When I am not doing physics (which is becoming increasingly rare!), I like playing the flute, coming up with random melodies, and biking. And here is a [random rock](https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=leolo) in our solar system.
 
