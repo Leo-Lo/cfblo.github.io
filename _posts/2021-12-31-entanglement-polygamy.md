@@ -1,9 +1,7 @@
 ---
 layout: distill
 title: Entanglement polygamy is possible for qudits
-description: an example of a distill-style blog post and main elements
-tags: quantum-information draft exposition
-categories: physics
+description: Or, given more room, quantum particles enjoy more company.
 comments: true
 date: 2021-05-22
 
