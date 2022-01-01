@@ -5,4 +5,4 @@ title: resume
 nav: true
 ---
 
-{% pdf /assets/pdf/Resume_CFBLo.pdf %}
+{% pdf ../assets/pdf/Resume_CFBLo.pdf %}

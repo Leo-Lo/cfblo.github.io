@@ -5,6 +5,7 @@ date: 2021-12-31
 description: 
 tags: quantum-information draft
 categories: physics
+comments: true
 ---
 
 (Warning: This post is incomplete)
@@ -43,10 +44,10 @@ is a maximally entangled state, using both approach mentioned above. I will use 
 \begin{equation}
 \rho = \ket{EPR}\bra{EPR} = \frac{1}{2}
 \begin{pmatrix}
-1 & 0 & 0 & 1\\
-0 & 0 & 0 & 0\\
-0 & 0 & 0 & 0\\
-1 & 0 & 0 & 1\\
+1 & 0 & 0 & 1 //
+0 & 0 & 0 & 0 //
+0 & 0 & 0 & 0 //
+1 & 0 & 0 & 1
 \end{pmatrix}
 \end{equation}
 
@@ -55,10 +56,10 @@ where the indexing of the 4 entries are $$\ket{00},\ket{01},\ket{10},\ket{11}$$.
 
 ### 1st approach: spin-spin correlation function
 
-\begin{align*}
-3&= 2\\
+\begin{align}
+3&= 2 //
 2&=3
-\end{align*}
+\end{align}
 
 
 
