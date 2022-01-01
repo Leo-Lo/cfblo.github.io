@@ -1,6 +1,6 @@
 ---
 layout: distill
-title: Entanglement polygamy is possible for qudits distill
+title: Entanglement polygamy is possible for qudits dist
 date: 2021-12-31
 description: Or, given more room, quantum particles enjoy more company.
 tags: quantum-information draft exposition
@@ -16,7 +16,6 @@ authors:
 toc:
   - name: Intro
   - name: Maximally entangled defined
-  	- name: Bell state example
   - name: Maximally entangle 3 quantum particles
 
 ---
