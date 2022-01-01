@@ -3,7 +3,7 @@ layout: post
 title: Entanglement polygamy is possible for qudits
 date: 2021-12-31
 description: 
-tags: quantum-information draft
+tags: quantum-information draft exposition
 categories: physics
 comments: true
 ---
@@ -41,15 +41,15 @@ I will now show that one of the [Bell states](https://en.wikipedia.org/wiki/Bell
 
 is a maximally entangled state, using both approach mentioned above. I will use the density matrix formalism, since the second approach (which involves calculating the Von Neumann entropy) hinges on the density matrix formalism. In this formalism, the density matrix representing the state is 
 
-\begin{equation}
+$$
 \rho = \ket{EPR}\bra{EPR} = \frac{1}{2}
 \begin{pmatrix}
-1 & 0 & 0 & 1 //
-0 & 0 & 0 & 0 //
-0 & 0 & 0 & 0 //
+1 & 0 & 0 & 1 \\
+0 & 0 & 0 & 0 \\
+0 & 0 & 0 & 0 \\
 1 & 0 & 0 & 1
 \end{pmatrix}
-\end{equation}
+$$
 
 where the indexing of the 4 entries are $$\ket{00},\ket{01},\ket{10},\ket{11}$$. 
 
