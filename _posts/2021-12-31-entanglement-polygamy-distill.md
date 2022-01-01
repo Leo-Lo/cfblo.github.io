@@ -3,20 +3,20 @@ layout: distill
 title: Entanglement polygamy is possible for qudits
 date: 2021-12-31
 description: Or, given more room, quantum particles enjoy more company.
-# tags: quantum-information draft exposition
-# categories: physics
+tags: quantum-information draft exposition
+categories: physics
 comments: true
 
 authors:
-  - name: Albert Einstein
-    url: "https://en.wikipedia.org/wiki/Albert_Einstein"
+  - name: Leo Lo
+    url: "https://leo-lo.github.io"
     affiliations:
-      name: IAS, Princeton
+      name: Columbia University
 
 toc:
   - name: Intro
   - name: Maximally entangled defined
-  - name: How to maximally entangle 3 quantum particles?
+  - name: Maximally entangle 3 quantum particles
 
 ---
 
@@ -80,7 +80,7 @@ where the indexing of the 4 entries are $$\ket{00},\ket{01},\ket{10},\ket{11}$$.
 #### 2nd approach: Von Neumann entropy of reduced density matrices
 
 
-## How to maximally entangle 3 quantum particles?
+## Maximally entangle 3 quantum particles
 
 The idea I have is to not restrict ourselves to just 
 
