@@ -60,11 +60,11 @@ Working out the correlation function $$\langle S_x^{(1)}\otimes S_x^{(2)} \rangl
 
 $$
 \begin{align*}
-\langle S_x^{(1)}\otimes S_x^{(2)} \rangle = \bra{EPR} S_x^{(1)}\otimes S_x^{(2)} \ket{EPR} &= \Tr (S_x^{(1)}\otimes S_x^{(2)} \rho_{EPR})\\
-&= \Tr \left[\frac{1}{\sqrt{2}}\left(S_x^{(1)}\ket{0}\otimes S_x^{(2)}\ket{0} + S_x^{(1)}\ket{1}\otimes S_x^{(2)}\ket{1}\right)\bra{EPR}\right]\\
-&= \frac{\hbar^2}{4} \Tr \left[\frac{1}{\sqrt{2}}\left(\ket{1}\otimes \ket{1} + \ket{0}\otimes \ket{0}\right)\bra{EPR}\right]\\
-&= \frac{\hbar^2}{4} \Tr \left[\ket{EPR}\bra{EPR}\right]\\
-&= \frac{\hbar^2}{4} \Tr [\rho_{EPR}]\\
+\langle S_x^{(1)}\otimes S_x^{(2)} \rangle = \bra{EPR} S_x^{(1)}\otimes S_x^{(2)} \ket{EPR} &= \text{Tr} (S_x^{(1)}\otimes S_x^{(2)} \rho_{EPR})\\
+&= \text{Tr} \left[\frac{1}{\sqrt{2}}\left(S_x^{(1)}\ket{0}\otimes S_x^{(2)}\ket{0} + S_x^{(1)}\ket{1}\otimes S_x^{(2)}\ket{1}\right)\bra{EPR}\right]\\
+&= \frac{\hbar^2}{4} \text{Tr} \left[\frac{1}{\sqrt{2}}\left(\ket{1}\otimes \ket{1} + \ket{0}\otimes \ket{0}\right)\bra{EPR}\right]\\
+&= \frac{\hbar^2}{4} \text{Tr} \left[\ket{EPR}\bra{EPR}\right]\\
+&= \frac{\hbar^2}{4} \text{Tr} [\rho_{EPR}]\\
 &= \frac{\hbar^2}{4}
 \end{align*}
 $$
@@ -75,12 +75,24 @@ The correlation function in the other 2 directions can be obtained in the same w
 
 As a side remark, having maximized spin-spin correlation functions in all spatial directions is not possible for any classical state. The best a classical state can do is a mixed state, e.g. $$\rho = \frac{1}{2} \ket{00}\bra{00} +\frac{1}{2} \ket{00}\bra{00}$$, which maximized the spin-spin correlation function in 1 direction: $$\langle S_z^{(1)}\otimes S_z^{(2)} \rangle$$; however, the x- and y- component of spin will be completely uncorrelated, i.e. , $$\langle S_x^{(1)}\otimes S_x^{(2)} \rangle = \langle S_y^{(1)}\otimes S_y^{(2)} \rangle = 0$$.
 
-
+Another way to see that $\ket{EPR}$ is maximally entangled is that even though it is a pure state, the reduced density matrix is $$\rho = \frac{1}{2}\ket{0}\bra{0} + \frac{1}{2}\ket{1}\bra{1}$$, which is a classical mixed state with maximal Von Neumann entropy.
 
 
 ## Maximally entangle 3 quantum particles
 
-In order to maximally entangle 3 particles, my idea is to not restrict ourselves to just qubits, but use 
+In order to maximally entangle 3 particles, my idea is to not restrict ourselves to just qubits (spin-1/2 particles), but use spin-1 particle. My claim is that the following state is maximally entangled
+
+$$
+\ket{\psi} = \frac{1}{\sqrt{3}} (\ket{abc} + \ket{bca} + \ket{cab})
+$$
+
+where $$a=-1, b=0, c=1$$.
+
+Now, as a first indicator that it is maximally entangled, we note that the reduced density matrix for the 1-particle subsystem is $$ \rho_1 =  \frac{1}{3}\ket{a}\bra{a} + \frac{1}{3}\ket{b}\bra{b} + \frac{1}{3}\ket{c}\bra{c}$$, which is a classically maximally mixed state. 
+
+We then calculate the spin-spin correlation function. 
+
+To be continued...
 
 
 
@@ -88,7 +100,10 @@ In order to maximally entangle 3 particles, my idea is to not restrict ourselves
 
 
 
-For anyone who is interested in learning more about these materials, I highly recommend checking out *Quantum Computation and Quantum Information* by Michael Nielson and Isaac Chuang (or sometimes affectionately refered to as Mike & Ike); it is very pedagogical on a lot of fascinating topics. 
+
+
+
+Addendum: For anyone who is interested in learning more about these materials, I highly recommend checking out *Quantum Computation and Quantum Information* by Michael Nielson and Isaac Chuang (or sometimes affectionately refered to as Mike & Ike); it is very pedagogical on a lot of fascinating topics. 
 
 
 
