@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Entanglement polygamy is possible for qudits
+title: Entanglement polygamy is possible for qudits (deprecated post)
 date: 2021-12-31
 description: Or, given more room, quantum particles enjoy more company.
 tags: quantum-information draft exposition
@@ -35,9 +35,9 @@ There are two ways to show that 2 qubits are maximally entangled. Let $$\ket{\ps
 
 I will now show that one of the [Bell states](https://en.wikipedia.org/wiki/Bell_state) (sometimes also called the EPR pairs)
 
-\begin{equation}
+$$
 \ket{EPR}= \frac{1}{\sqrt{2}}\left(\ket{00}+\ket{11}\right)
-\end{equation}
+$$
 
 is a maximally entangled state, using both approach mentioned above. I will use the density matrix formalism, since the second approach (which involves calculating the Von Neumann entropy) hinges on the density matrix formalism. In this formalism, the density matrix representing the state is 
 
@@ -56,11 +56,12 @@ where the indexing of the 4 entries are $$\ket{00},\ket{01},\ket{10},\ket{11}$$.
 
 ### 1st approach: spin-spin correlation function
 
-\begin{align}
-3&= 2 //
+$$
+\begin{align*}
+3&= 2 \\
 2&=3
-\end{align}
-
+\end{align*}
+$$
 
 
 ### 2nd approach: Von Neumann entropy of reduced density matrices
