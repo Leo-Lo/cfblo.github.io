@@ -73,10 +73,10 @@ where the indexing of the 4 entries are $$\ket{00},\ket{01},\ket{10},\ket{11}$$.
 ### 1st approach: spin-spin correlation function
 
 $$
-\begin{align}
+\begin{align*}
 1 &= 2\\
 2 &= 3
-\end{align}
+\end{align*}
 $$
 
 
