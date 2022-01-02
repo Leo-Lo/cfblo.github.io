@@ -73,10 +73,11 @@ where the indexing of the 4 entries are $$\ket{00},\ket{01},\ket{10},\ket{11}$$.
 ### 1st approach: spin-spin correlation function
 
 $$
-3&= 2 //
-2&=3
+\begin{align}
+1 &= 2\\
+2 &= 3
+\end{align}
 $$
-
 
 
 ### 2nd approach: Von Neumann entropy of reduced density matrices
