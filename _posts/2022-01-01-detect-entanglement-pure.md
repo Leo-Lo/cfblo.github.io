@@ -34,7 +34,7 @@ An important identity we need to know is that in density matrix formalism, the e
 
 $$
 \begin{align*}
-\bra{psi} \mathcal O \ket{\psi} = \Tr (\mathcal O \rho)
+\bra{\psi} \mathcal O \ket{\psi} = Tr (\mathcal O \rho)
 &= 
 \end{align*}
 $$
