@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Interesting transformation in quantum mechanics
+title: Interesting transformation in quantum theories
 date: 2022-01-11
 description: A list in progress
 tags: quantum-mechanics condensed-matter quantum-field-theory
