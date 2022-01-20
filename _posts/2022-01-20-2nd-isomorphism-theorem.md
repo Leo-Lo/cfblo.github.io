@@ -15,9 +15,9 @@ As I often forget how to prove the second isomorphism theorem in group theory, h
 # Theorem statement
 
 Given group $$G$$, subgroup $$S\leq G$$, normal subgroup $$N\trianglelefteq G$$, then
-(1) $$SN \leq G$$
-(2) $$S\cap N \trianglelefteq S$$
-(3) $$(SN)/N \cong S/(S\cap N)$$
+- (1) $$SN \leq G$$
+- (2) $$S\cap N \trianglelefteq S$$
+- (3) $$(SN)/N \cong S/(S\cap N)$$
 
 ## Proof of (1)
 First, to show that $$SN$$ is a subset. $$SN=\{sn | s\in S, n\in N\}$$. Since $$s\in G, n \in G$$, by closure of group multiplication, $$sn\in G$$, so $$SN$$ is a subset of $$G$. 
@@ -54,7 +54,7 @@ A better strategy is to use the first isomorphism theorem: given a homomorphism 
 1) $$h: SN \rightarrow S/(S\cap N)$$ such that $$\text{ker}(h)=N, \text{Im}(h) = S/(S\cap N)$$
 2) $$h: S \rightarrow (SN)/N$$ such that $$\text{ker}(h)=S\cap N, \text{Im}(h) = (SN)/N$$
 
-We will take option 1). Define the homomorphism $$h: SN \rightarrow S/(S\cap N)$$ as $$h(sn) = [s]$$, with the equivalence relation $$s_1\sim s_2$$ if $$\exists n\in N$$ such that $$s_1=n s_2$$. This homomorphism is surjective since $$\forall [s]\in S/(S\cap N), \exists s\in S$$ such that $$h(s)=[s]. To find the kernel of the homomorphism, need to know what is in the equivalence class $$[e]$$, which by definition of $$S/(S\cap N)$$, is $$N$$. Then $$\forall n\in N, h(n) = [e]$$. For $$s \in SN, s\notin N$$, h(s)=[s]\neq [e]$$. Therefore, $$\text{ker}(h)=N. 
+We will take option 1). Define the homomorphism $$h: SN \rightarrow S/(S\cap N)$$ by $$h(sn) = [s]$$, with the equivalence relation $$s_1\sim s_2$$ if $$\exists n\in N$$ such that $$s_1=n s_2$$. This homomorphism is surjective since $$\forall [s]\in S/(S\cap N), \exists s\in S$$ such that $$h(s)=[s]. To find the kernel of the homomorphism, need to know what is in the equivalence class $$[e]$$, which by definition of $$S/(S\cap N)$$, is $$N$$. Then $$\forall n\in N, h(n) = [e]$$. For $$s \in SN, s\notin N$$, h(s)=[s]\neq [e]$$. Therefore, $$\text{ker}(h)=N. 
 
 Q.E.D.
 
