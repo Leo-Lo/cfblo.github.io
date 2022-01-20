@@ -2,8 +2,8 @@
 layout: post
 title: The second isomorphism theorem
 date: 2022-01-20
-description: 
-tags: algebra reference
+description: AKA the diamond theorem
+tags: group-theory reference
 categories: math
 comments: true
 ---
