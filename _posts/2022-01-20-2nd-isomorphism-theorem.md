@@ -46,7 +46,7 @@ Last, to show that $$S\cap N$$ is normal with respect to $$S$$, need to show $$\
 
 In order to form the quotient group $$(SN)/N$$, need to first show that $$N \trianglelefteq SN$$. We already know $$N$$ is a subset of $$SN$$, and it is a group, so it remains to show the normality condition. $$\forall n'\in N, sn \in SN$$, need to show $$(sn) n' (sn)^{-1}=snn'n^{-1}s^{-1} \in N$$. First insert pairs of $$s^{-1}s$$ in between every elements of $$N$$ to obtain $$(s n s^{-1}) (s n' s^{-1})(s n^{-1} s^{-1})$$. Since $$N \trianglelefteq G$$, all three parathesized elements are in $$N$$, and then use closure to conclude $$(sn) n' (sn)^{-1}\in N$$. 
 
-Next, need to understand the group element in $$(SN)/N$$ and $$S/(S\cap N)$$. $$(SN)/N=\{[[sn] \in SN| s_1n_1 \sim s_2 n_2 \text{ if } \exists n \text{ such that } s_1n_1 = n \cdot s_2n_2\}$$. 
+Next, need to understand the group element in $$(SN)/N$$ and $$S/(S\cap N)$$. $$(SN)/N=\{[[sn] \in SN\}$$, where the equivalence relation is given by $$s_1n_1 \sim s_2 n_2$$ if $$\exists n$$ such that $$s_1n_1 = n \cdot s_2n_2$$. 
 
 One strategy is to construct a homomorphism $$(SN)/N \rightarrow S/(S\cap N)$$, then show its inverse exists. Or show it is both injective and surjective. This requires quite a lot of low-level detail defining the homormophisms and proving their properties.
 
@@ -54,7 +54,7 @@ A better strategy is to use the first isomorphism theorem: given a homomorphism 
 - $$h: SN \rightarrow S/(S\cap N)$$ such that $$\text{ker}(h)=N, \text{Im}(h) = S/(S\cap N)$$
 - $$h: S \rightarrow (SN)/N$$ such that $$\text{ker}(h)=S\cap N, \text{Im}(h) = (SN)/N$$
 
-We will take the first option. Define the homomorphism $$h: SN \rightarrow S/(S\cap N)$$ by $$h(sn) = [s]$$, with the equivalence relation $$s_1\sim s_2$$ if $$\exists n\in N$$ such that $$s_1=n s_2$$. This homomorphism is surjective since $$\forall [s]\in S/(S\cap N), \exists s\in S$$ such that $$h(s)=[s]$$. To find the kernel of the homomorphism, need to know what is in the equivalence class $$[e]$$, which by definition of $$S/(S\cap N)$$, is $$N$$. Then $$\forall n\in N, h(n) = [e]$$. For $$s \in SN, s\notin N$$, h(s)=[s]\neq [e]$$. Therefore, $$\text{ker}(h)=N$$. 
+We will take the first option. Define the homomorphism $$h: SN \rightarrow S/(S\cap N)$$ by $$h(sn) = [s]$$, with the equivalence relation $$s_1\sim s_2$$ if $$\exists n\in N$$ such that $$s_1=n s_2$$. This homomorphism is surjective since $$\forall [s]\in S/(S\cap N), \exists s\in S$$ such that $$h(s)=[s]$$. To find the kernel of the homomorphism, need to know what is in the equivalence class $$[e]$$, which by definition of $$S/(S\cap N)$$, is $$N$$. Then $$\forall n\in N, h(n) = [e]$$. For $$s \in SN, s\notin N, h(s)=[s]\neq [e]$$. Therefore, $$\text{ker}(h)=N$$. 
 
 Q.E.D.
 
