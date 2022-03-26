@@ -14,7 +14,7 @@ comments: true
 
 In second quantized notation, a tight-binding Hamiltonian is given by 
 $$
-H=\sum_{\bold{R}} c^\dagger_{\bold R \alpha} h_{\alpha\beta}(\bold R) c_{\bold R \beta} = \sum_{\bold{R}}\vec{c}^\dagger_{\bold R} h(\bold R) \vec{c}_{\bold R}
+H=\sum_{\boldsymbol{R}} c^\dagger_{\bold R \alpha} h_{\alpha\beta}(\bold R) c_{\bold R \beta} = \sum_{\bold{R}}\vec{c}^\dagger_{\bold R} h(\bold R) \vec{c}_{\bold R}
 $$
 To diagonalize it, we need to transform to the Fourier basis. Below is the convention for (inverse) Fourier transform
 $$
