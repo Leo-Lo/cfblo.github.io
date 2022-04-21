@@ -1,10 +1,10 @@
 ---
 layout: post
-title: Tight-binding convention
-date: 2022-03-24
-description: Fourier transform convention for the 2nd quantized operators
-tags: condensed-matter reference
-categories: physics
+title: Christofel symbol
+date: 2022-04-01
+description: A nice little derivation
+tags: exposition reference general-relativity
+categories: physics math
 comments: true
 ---
 
