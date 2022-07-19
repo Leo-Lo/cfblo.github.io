@@ -9,9 +9,6 @@ comments: true
 ---
 
 
-
-
-
 # Christofel symbol
 
 I will derive the Christofel symbol. I learned this derivation from Andrei Boloborodov's course on General Relativity, which imo better motivate the use of Christofel symbol than that presented in Sean Carroll's book.
