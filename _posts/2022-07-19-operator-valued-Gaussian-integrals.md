@@ -23,6 +23,8 @@ and the state $$\ket{\alpha} = e^{-\alpha^2/2} \ket{0}$$ denotes a coherent stat
 
 and the state $$\ket{\alpha} = |\alpha| \ket{0}$$ denotes a coherent state.
 
+and the state $$\ket{\alpha} = |\alpha| $$ denotes a coherent state.
+
 
 ## My unconventional method
 
