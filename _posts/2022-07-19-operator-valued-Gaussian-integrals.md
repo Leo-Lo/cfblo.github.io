@@ -15,13 +15,13 @@ $$
 \mathbb 1 = \frac{1}{\pi} \int d^2\alpha\space \ket{\alpha} \bra{\alpha} 
 $$
 
-where $$d^2\alpha = d\mathbb{Re}(\alpha) d\mathbb{Im}(\alpha)= \frac{1}{2}d\alpha d\bar\alpha$$, and the state $$\ket{\alpha} = e^{-|\alpha|^2/2}e^{\alpha a^\dagger} \ket{0}$$ denotes a coherent state.
-
-and the state $$\ket{\alpha} = e^{\alpha a^\dagger} \ket{0}$$ denotes a coherent state.
+where $$d^2\alpha = d\mathbb{Re}(\alpha) d\mathbb{Im}(\alpha)= \frac{1}{2}d\alpha d\bar\alpha$$, and the state $$\ket{\alpha} = e^{-\mid \alpha\mid^2/2}e^{\alpha a^\dagger} \ket{0}$$ denotes a coherent state.
 
 and the state $$\ket{\alpha} = e^{-|\alpha|^2/2} \ket{0}$$ denotes a coherent state.
 
-and the state $$\ket{\alpha} = e^{-|\alpha|} \ket{0}$$ denotes a coherent state.
+and the state $$\ket{\alpha} = e^{-\alpha^2/2} \ket{0}$$ denotes a coherent state.
+
+and the state $$\ket{\alpha} = |\alpha| \ket{0}$$ denotes a coherent state.
 
 
 ## My unconventional method
