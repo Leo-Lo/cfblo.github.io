@@ -12,7 +12,7 @@
   Chiu Fan Bowen "Leo" Lo
 
 
-  | blog
+  | Why do ghosts appear in gauge theories?
 
 </title>
 <meta name="description" content="This is the academic profile page of Chiu Fan Bowen (Leo) Lo.
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="Leo-Lo.github.io/blog/">
+<link rel="canonical" href="Leo-Lo.github.io/blog/2021/why-ghost/">
 
 
 <!-- Dark Mode -->
@@ -84,14 +84,10 @@
             <a class="nav-link" href="/blog/">
               blog
               
-              <span class="sr-only">(current)</span>
-              
             </a>
           </li>
           
           <!-- Other pages -->
-          
-          
           
           
           
@@ -173,8 +169,8 @@
           
           
           
-            <div class = "toggle-container">
-              <a id = "light-toggle">
+            <div class="toggle-container">
+              <a id="light-toggle">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
               </a>
@@ -191,171 +187,93 @@
     <!-- Content -->
 
     <div class="container mt-5">
-      <div class="post">
-
-  <div class="header-bar">
-    <h1>Condensed Thoughts</h1>
-    <h2>On physics, math, and other interesting things</h2>
-  </div>
+      
 
 
-  <ul class="post-list">
-    
 
-    
-    
-    
-    
 
-    <li>
-      <h3><a class="post-title" href="/blog/2022/operator-valued-Gaussian-integrals/">An Unconventional Way in evaluating operator-valued Gaussian integrals</a>
-      </h3>
-      <p>To hell with ordering at first, and ask for forgiveness later.</p>
-      <p class="post-meta"> 4 min read &nbsp; &middot; &nbsp;
-        July 19, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
 
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">Why do ghosts appear in gauge theories?</h1>
+    <p class="post-meta">October 31, 2021</p>
+    <p class="post-tags">
+      <a href="/blog/2021"> <i class="fas fa-calendar fa-sm"></i> 2021 </a>
+      
+        ·  
+        
+        <a href="/blog/tag/quantum-field-theory">
+          <i class="fas fa-hashtag fa-sm"></i> quantum-field-theory</a>  
           
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/exposition">
-              <i class="fas fa-hashtag fa-sm"></i> exposition</a> &nbsp;
-              
-            <a href="/blog/tag/reference">
-              <i class="fas fa-hashtag fa-sm"></i> reference</a> &nbsp;
-              
-            <a href="/blog/tag/operator-algebra">
-              <i class="fas fa-hashtag fa-sm"></i> operator-algebra</a> &nbsp;
-              
+        <a href="/blog/tag/exposition">
+          <i class="fas fa-hashtag fa-sm"></i> exposition</a>  
           
+      
 
+      
+        ·  
+        
+        <a href="/blog/category/physics">
+          <i class="fas fa-tag fa-sm"></i> physics</a>  
           
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/physics">
-              <i class="fas fa-tag fa-sm"></i> physics</a> &nbsp;
-              
-            <a href="/blog/category/math">
-              <i class="fas fa-tag fa-sm"></i> math</a> &nbsp;
-              
-          
+      
+
     </p>
-    </li>
+  </header>
 
-    
+  <article class="post-content">
+    <p><em>For obvious terminology reason, I am retroactively putting the date of this post to be at Halloween. But the Halloween of 2021 also happened to be around the time I pondered and realized the answer to the question of this blogpost.</em></p>
 
-    
-    
-    
-    
+<h1 id="intro">Intro</h1>
 
-    <li>
-      <h3><a class="post-title" href="/blog/2022/Christofel-symbol/">Christofel symbol</a>
-      </h3>
-      <p>A nice little derivation</p>
-      <p class="post-meta"> 2 min read &nbsp; &middot; &nbsp;
-        April 1, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+<p><a href="https://en.wikipedia.org/wiki/Gauge_theory" target="_blank" rel="noopener noreferrer">Gauge theory</a> is fundamental in building the Standard Model and many interesting condensed matter model. There is a gauge degree of freedom in the theory, which is just a redundancy in description, but it is needed in order to write down the theory in a manifestly Lorentz-invariant way (as all action should be).</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/exposition">
-              <i class="fas fa-hashtag fa-sm"></i> exposition</a> &nbsp;
-              
-            <a href="/blog/tag/reference">
-              <i class="fas fa-hashtag fa-sm"></i> reference</a> &nbsp;
-              
-            <a href="/blog/tag/general-relativity">
-              <i class="fas fa-hashtag fa-sm"></i> general-relativity</a> &nbsp;
-              
-          
+<p>First, the <strong>short answer</strong> for why ghost arises in gauge theory is that <strong>we need ghosts to fix the gauge in a gauge-invariant way.</strong> At first sight this might seem paradoxical, so the goal of this post is to pinpoint exactly where ghost is needed in the formalism of gauge theories.</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/physics">
-              <i class="fas fa-tag fa-sm"></i> physics</a> &nbsp;
-              
-            <a href="/blog/category/math">
-              <i class="fas fa-tag fa-sm"></i> math</a> &nbsp;
-              
-          
-    </p>
-    </li>
+<h1 id="the-main-player-the-jacobian-determinant">The main player: the Jacobian determinant</h1>
 
-    
+<p>We impose gauge constraints \(G_i(x_j)=0\), where \(x_i\) are the gauge degree of freedom, by inserting the Dirac delta into the $$\delta (G_i)</p>
 
-    
-    
-    
-    
+<p>Under a gauge transformation $x\rightarrow y$, this introduces a Jacobian determinant to the gauge fixing</p>
 
-    <li>
-      <h3><a class="post-title" href="/blog/2022/fourier/">Taking complex conjugate of Fourier transform</a>
-      </h3>
-      <p>First the wrong way, then the right way</p>
-      <p class="post-meta"> 2 min read &nbsp; &middot; &nbsp;
-        March 30, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+\[\delta(G_i(x_j)) \rightarrow \frac{1}{det(\mathcal F_{jk})} \delta(G_i(y_k))\]
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/reference">
-              <i class="fas fa-hashtag fa-sm"></i> reference</a> &nbsp;
-              
-          
+<p>where \(F_{jk}= \frac{\partial y_j}{\partial x^k}\) is the Jacobian matrix that essentially describe how the differential volume element is changed after the gauge transformation. Since gauge transformation only amounts to choosing a different representative in the gauge orbit, there is no change to the physics. So we want to make sure that the gauge fixing condition is invariant under gauge transformation. Therefore, the invariant gauge fixing condition is</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/analysis">
-              <i class="fas fa-tag fa-sm"></i> analysis</a> &nbsp;
-              
-            <a href="/blog/category/math">
-              <i class="fas fa-tag fa-sm"></i> math</a> &nbsp;
-              
-          
-    </p>
-    </li>
+\[det(\mathcal F_{jk})\delta(G_i(y_k))\]
 
-    
-  </ul>
+<p>where we multiple with the Jacobian determinant to counter-balance the \(1/(\delta(G_i(y_k))\) factor from the Dirac delta term.</p>
+
+<h1 id="represent-in-terms-of-feynman-diagram">Represent in terms of Feynman diagram</h1>
+
+<p>Next, we want to represent everything in the language of Feynman diagrams, i.e. write all the terms in the partition function as a Gaussian integral. In order for the determinant factor to be expressed as an Gaussian integral, we use the following fact about multi-dimensional Grassmann integral:</p>
+
+\[\int \prod_i da_i \prod_j db_j e^{a_i D_{ij} b_j} = \det (D)\]
+
+<p>where \(a,b\) are Grassmann variables (think of them as fermionic field at the classical level). Applying this to our case, we have</p>
+
+\[\int D \bar{c}_i Dc_j e^{\bar{c}_i \mathcal{F}_{ij} c_j} = \det (\mathcal{F})\]
+
+<p>where \(c, \bar{c}\) are Grassmann-valued fields: \(c\) is the ghost and \(\bar{c}\) is the anti-ghost field. Therefore, in order to express the determinant factor as a Gaussian integral (which is necesssary for the gauge fixing condition to transform properly under gauge transformation), we are forced to introduce ghost and anti-ghost.</p>
+
+  </article>
 
   
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li>
-    
-      
-        <li class="page-item active"><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blog - page 3">3</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/4/index.html" title="blog - page 4">4</a></li>
-      
-    
-    <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
-
-
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'leo-academic-blog';
+      var disqus_identifier = '/blog/2021/why-ghost';
+      var disqus_title      = "Why do ghosts appear in gauge theories?";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+  
 
 </div>
 
@@ -366,8 +284,8 @@
     
 <footer class="fixed-bottom">
   <div class="container mt-0">
-    &copy; Copyright 2022 Chiu Fan Bowen  Lo.
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Protected by a topological invariant. 
+    © Copyright 2022 Chiu Fan Bowen  Lo.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Protected by a topological invariant. 
 
     
     

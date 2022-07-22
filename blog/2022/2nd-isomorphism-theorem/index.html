@@ -12,7 +12,7 @@
   Chiu Fan Bowen "Leo" Lo
 
 
-  | blog
+  | The second isomorphism theorem
 
 </title>
 <meta name="description" content="This is the academic profile page of Chiu Fan Bowen (Leo) Lo.
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="Leo-Lo.github.io/blog/">
+<link rel="canonical" href="Leo-Lo.github.io/blog/2022/2nd-isomorphism-theorem/">
 
 
 <!-- Dark Mode -->
@@ -84,14 +84,10 @@
             <a class="nav-link" href="/blog/">
               blog
               
-              <span class="sr-only">(current)</span>
-              
             </a>
           </li>
           
           <!-- Other pages -->
-          
-          
           
           
           
@@ -173,8 +169,8 @@
           
           
           
-            <div class = "toggle-container">
-              <a id = "light-toggle">
+            <div class="toggle-container">
+              <a id="light-toggle">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
               </a>
@@ -191,171 +187,117 @@
     <!-- Content -->
 
     <div class="container mt-5">
-      <div class="post">
-
-  <div class="header-bar">
-    <h1>Condensed Thoughts</h1>
-    <h2>On physics, math, and other interesting things</h2>
-  </div>
+      
 
 
-  <ul class="post-list">
-    
 
-    
-    
-    
-    
 
-    <li>
-      <h3><a class="post-title" href="/blog/2022/operator-valued-Gaussian-integrals/">An Unconventional Way in evaluating operator-valued Gaussian integrals</a>
-      </h3>
-      <p>To hell with ordering at first, and ask for forgiveness later.</p>
-      <p class="post-meta"> 4 min read &nbsp; &middot; &nbsp;
-        July 19, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
 
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">The second isomorphism theorem</h1>
+    <p class="post-meta">January 20, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+      
+        ·  
+        
+        <a href="/blog/tag/group-theory">
+          <i class="fas fa-hashtag fa-sm"></i> group-theory</a>  
           
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/exposition">
-              <i class="fas fa-hashtag fa-sm"></i> exposition</a> &nbsp;
-              
-            <a href="/blog/tag/reference">
-              <i class="fas fa-hashtag fa-sm"></i> reference</a> &nbsp;
-              
-            <a href="/blog/tag/operator-algebra">
-              <i class="fas fa-hashtag fa-sm"></i> operator-algebra</a> &nbsp;
-              
+        <a href="/blog/tag/reference">
+          <i class="fas fa-hashtag fa-sm"></i> reference</a>  
           
+      
 
+      
+        ·  
+        
+        <a href="/blog/category/math">
+          <i class="fas fa-tag fa-sm"></i> math</a>  
           
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/physics">
-              <i class="fas fa-tag fa-sm"></i> physics</a> &nbsp;
-              
-            <a href="/blog/category/math">
-              <i class="fas fa-tag fa-sm"></i> math</a> &nbsp;
-              
-          
+      
+
     </p>
-    </li>
+  </header>
 
-    
+  <article class="post-content">
+    <h1 id="motivation">Motivation</h1>
 
-    
-    
-    
-    
+<p>As I often forget how to prove the second isomorphism theorem in group theory, here is one (in all painstaking details) for the record.</p>
 
-    <li>
-      <h3><a class="post-title" href="/blog/2022/Christofel-symbol/">Christofel symbol</a>
-      </h3>
-      <p>A nice little derivation</p>
-      <p class="post-meta"> 2 min read &nbsp; &middot; &nbsp;
-        April 1, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+<h1 id="theorem-statement">Theorem statement</h1>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/exposition">
-              <i class="fas fa-hashtag fa-sm"></i> exposition</a> &nbsp;
-              
-            <a href="/blog/tag/reference">
-              <i class="fas fa-hashtag fa-sm"></i> reference</a> &nbsp;
-              
-            <a href="/blog/tag/general-relativity">
-              <i class="fas fa-hashtag fa-sm"></i> general-relativity</a> &nbsp;
-              
-          
+<p>Given group \(G\), subgroup \(S\leq G\), normal subgroup \(N\trianglelefteq G\), then</p>
+<ul>
+  <li>(1) \(SN \leq G\)</li>
+  <li>(2) \(S\cap N \trianglelefteq S\)</li>
+  <li>(3) \((SN)/N \cong S/(S\cap N)\)</li>
+</ul>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/physics">
-              <i class="fas fa-tag fa-sm"></i> physics</a> &nbsp;
-              
-            <a href="/blog/category/math">
-              <i class="fas fa-tag fa-sm"></i> math</a> &nbsp;
-              
-          
-    </p>
-    </li>
+<h2 id="proof-of-1">Proof of (1)</h2>
+<p>First, to show that \(SN\) is a subset. \(SN=\{sn | s\in S, n\in N\}\). Since \(s\in G, n \in G\), by closure of group multiplication, \(sn\in G\), so \(SN\) is a subset of \(G\).</p>
 
-    
+<p>Next, we need to show that \(SN\) is itself a group. Check the group axioms:</p>
 
-    
-    
-    
-    
+<ul>
+  <li>Identity: \(e\) is the identity element in \(SN\).</li>
+  <li>Inverse: Given \(sn \in SN\), then its inverse is \(n^{-1}s^{-1}\). Let \(n_3 = sn^{-1}s^{-1}\); since \(N\) is normal, \(n_3\in N\). Then the inverse element \(n^{-1}s^{-1}= s^{-1}n_3\), which is in \(SN\).</li>
+  <li>Associativity: Since \(s_in_i\) is an element in \(G\), by associativity of \(G\), \((s_1n_1\cdot s_2n_2)\cdot s_3n_3 = s_1n_1\cdot (s_2n_2\cdot s_3n_3)\)</li>
+  <li>Closure: Need to show \(s_1n_1s_2n_2 \in SN\). Let \(n_3 = s_2^{-1}n_1s_2\); by normality of \(N\), \(n_3\in N\). Then \(s_1n_1s_2n_2 = s_1 s_2 n_3 n_2\), which is manifestly in \(SN\).</li>
+</ul>
 
-    <li>
-      <h3><a class="post-title" href="/blog/2022/fourier/">Taking complex conjugate of Fourier transform</a>
-      </h3>
-      <p>First the wrong way, then the right way</p>
-      <p class="post-meta"> 2 min read &nbsp; &middot; &nbsp;
-        March 30, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+<h2 id="proof-of-2">Proof of (2)</h2>
+<p>First, \(S\cap N\) is obviously a subset of \(S\).</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/reference">
-              <i class="fas fa-hashtag fa-sm"></i> reference</a> &nbsp;
-              
-          
+<p>Next, to show that \(S\cap N\) is a group. Again check the group axioms:</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/analysis">
-              <i class="fas fa-tag fa-sm"></i> analysis</a> &nbsp;
-              
-            <a href="/blog/category/math">
-              <i class="fas fa-tag fa-sm"></i> math</a> &nbsp;
-              
-          
-    </p>
-    </li>
+<ul>
+  <li>Identity: \(e\in S\) and \(e\in N\), so identity exists.</li>
+  <li>Inverse: given \(k\in S\cap N\), \(k\in S\) implies \(k^{-1} \in S\); \(k \in N\) implies \(k^{-1} \in N\); hence \(k^{-1}\in S\cap N\).</li>
+  <li>Associativity: Obvious as group elements of \(G\).</li>
+  <li>Closure: Given \(k,p \in S\cap N\), then \(k\in S\) and \(p \in S\) implies \(kp \in S\); \(k\in S\) and \(p \in S\) implies \(kp \in N\). So \(kp \in S\cap N\).</li>
+</ul>
 
-    
-  </ul>
+<p>Last, to show that \(S\cap N\) is normal with respect to \(S\), need to show \(\forall k \in S\cap N, \forall s\in S, sks^{-1} \in S\cap N\). Since both \(s,k\in S, sks^{-1}\in S\). Since \(k\in N, s\in G\) and \(N \trianglelefteq G\), then \(sks^{-1} \in N\). So \(sks^{-1} \in S\cap N\).</p>
+
+<h2 id="proof-of-3">Proof of (3)</h2>
+
+<p>In order to form the quotient group \((SN)/N\), need to first show that \(N \trianglelefteq SN\). We already know \(N\) is a subset of \(SN\), and it is a group, so it remains to show the normality condition. \(\forall n'\in N, sn \in SN\), need to show \((sn) n' (sn)^{-1}=snn'n^{-1}s^{-1} \in N\). First insert pairs of \(s^{-1}s\) in between every elements of \(N\) to obtain \((s n s^{-1}) (s n' s^{-1})(s n^{-1} s^{-1})\). Since \(N \trianglelefteq G\), all three parathesized elements are in \(N\), and then use closure to conclude \((sn) n' (sn)^{-1}\in N\).</p>
+
+<p>Next, need to understand the group element in \((SN)/N\) and \(S/(S\cap N)\). \((SN)/N=\{[[sn] \in SN\}\), where the equivalence relation is given by \(s_1n_1 \sim s_2 n_2\) if \(\exists n\) such that \(s_1n_1 = n \cdot s_2n_2\).</p>
+
+<p>One strategy is to construct a homomorphism \((SN)/N \rightarrow S/(S\cap N)\), then show its inverse exists. Or show it is both injective and surjective. This requires quite a lot of low-level detail defining the homormophisms and proving their properties.</p>
+
+<p>A better strategy is to use the first isomorphism theorem: given a homomorphism \(h: G\rightarrow H\), then \(G/\text{ker}(h) = \text{Im}(h)\). I can choose a surjective homormophism such that either of</p>
+<ul>
+  <li>\(h: SN \rightarrow S/(S\cap N)\) such that \(\text{ker}(h)=N, \text{Im}(h) = S/(S\cap N)\)</li>
+  <li>\(h: S \rightarrow (SN)/N\) such that \(\text{ker}(h)=S\cap N, \text{Im}(h) = (SN)/N\)</li>
+</ul>
+
+<p>We will take the first option. Define the homomorphism \(h: SN \rightarrow S/(S\cap N)\) by \(h(sn) = [s]\), with the equivalence relation \(s_1\sim s_2\) if \(\exists n\in N\) such that \(s_1=n s_2\). This homomorphism is surjective since \(\forall [s]\in S/(S\cap N), \exists s\in S\) such that \(h(s)=[s]\). To find the kernel of the homomorphism, need to know what is in the equivalence class \([e]\), which by definition of \(S/(S\cap N)\), is \(N\). Then \(\forall n\in N, h(n) = [e]\). For \(s \in SN, s\notin N, h(s)=[s]\neq [e]\). Therefore, \(\text{ker}(h)=N\).</p>
+
+<p>Q.E.D.</p>
+
+
+  </article>
 
   
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li>
-    
-      
-        <li class="page-item active"><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blog - page 3">3</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/4/index.html" title="blog - page 4">4</a></li>
-      
-    
-    <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
-
-
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'leo-academic-blog';
+      var disqus_identifier = '/blog/2022/2nd-isomorphism-theorem';
+      var disqus_title      = "The second isomorphism theorem";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+  
 
 </div>
 
@@ -366,8 +308,8 @@
     
 <footer class="fixed-bottom">
   <div class="container mt-0">
-    &copy; Copyright 2022 Chiu Fan Bowen  Lo.
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Protected by a topological invariant. 
+    © Copyright 2022 Chiu Fan Bowen  Lo.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Protected by a topological invariant. 
 
     
     

@@ -2,7 +2,7 @@
 <html lang="en">
 
   <head>
-    <meta http-equiv="refresh" content="3; url=Leo-Lo.github.io/" />
+    
     <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
 <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -12,7 +12,7 @@
   Chiu Fan Bowen "Leo" Lo
 
 
-  | Page not found
+  | An Unconventional Way in evaluating operator-valued Gaussian integrals
 
 </title>
 <meta name="description" content="This is the academic profile page of Chiu Fan Bowen (Leo) Lo.
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="Leo-Lo.github.io/404.html">
+<link rel="canonical" href="Leo-Lo.github.io/blog/2022/operator-valued-Gaussian-integrals/">
 
 
 <!-- Dark Mode -->
@@ -80,7 +80,7 @@
           </li>
           
           <!-- Blog -->
-          <li class="nav-item ">
+          <li class="nav-item active">
             <a class="nav-link" href="/blog/">
               blog
               
@@ -187,17 +187,124 @@
     <!-- Content -->
 
     <div class="container mt-5">
-      <div class="post">
+      
+
+
+
+
+
+<div class="post">
 
   <header class="post-header">
-    <h1 class="post-title">Page not found</h1>
-    <p class="post-description">Looks like there is a topological obstruction towards accessing the page you want. </p>
+    <h1 class="post-title">An Unconventional Way in evaluating operator-valued Gaussian integrals</h1>
+    <p class="post-meta">July 19, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+      
+        ·  
+        
+        <a href="/blog/tag/exposition">
+          <i class="fas fa-hashtag fa-sm"></i> exposition</a>  
+          
+        <a href="/blog/tag/reference">
+          <i class="fas fa-hashtag fa-sm"></i> reference</a>  
+          
+        <a href="/blog/tag/operator-algebra">
+          <i class="fas fa-hashtag fa-sm"></i> operator-algebra</a>  
+          
+      
+
+      
+        ·  
+        
+        <a href="/blog/category/physics">
+          <i class="fas fa-tag fa-sm"></i> physics</a>  
+          
+        <a href="/blog/category/math">
+          <i class="fas fa-tag fa-sm"></i> math</a>  
+          
+      
+
+    </p>
   </header>
 
-  <article>
-    <p>You will be redirected to the main page within 3 seconds. If not redirected, please click <a href="Leo-Lo.github.io/">here</a>.</p>
+  <article class="post-content">
+    <p>I want to prove the following resolution to the identity:</p>
+
+\[\mathbb 1 = \frac{1}{\pi} \int d^2\alpha\space \ket{\alpha} \bra{\alpha}\]
+
+<p>where \(d^2\alpha = d\mathbb{Re}(\alpha) d\mathbb{Im}(\alpha)= \frac{1}{2}d\alpha d\bar\alpha\), and the state \(\ket{\alpha} = e^{-\mid \alpha\mid^2/2}e^{\alpha a^\dagger} \ket{0}\) denotes a coherent state.</p>
+
+<h2 id="my-unconventional-method">My unconventional method</h2>
+
+<p>The main idea of the method can be captured by the slogan “to hell with ordering at first, and ask for forgiveness later.” We first massage the RHS into the form</p>
+
+\[\begin{align*}
+RHS &amp;=\frac{1}{2 \pi} \int d\alpha \space d\bar\alpha \space e^{-|\alpha|^2} e^{\alpha a^\dagger} \ket{0}\bra{0} e^{\bar\alpha a}\\
+&amp;= \frac{1}{\pi}\int  dR \space dI \space e^{- R^2-I^2} e^{(R+iI) a^\dagger} \ket{0}\bra{0} e^{(R-iI) a}
+\end{align*}\]
+
+<p>where I have defined \(R\equiv \mathbb{Re}(\alpha), I=\mathbb{Im}(\alpha)\) to simplify notation.</p>
+
+<p>Observe that the above integral is a Gaussian integral waiting to be completed the square, except it is obstructed by the ladder operators. Nonetheless, we say, to hell with ordering, let’s complete the square directly (and omit the projector \(\ket{0}\bra{0}\) for now).</p>
+
+\[\begin{align*}
+RHS &amp;=\space:\frac{1}{\pi} \int dR\space dI \space e^{-R^2 + R(a^\dagger + a)-I^2 + iI(a^\dagger -a)}:\\
+&amp;=\space :\frac{1}{\pi}\int dR \space e^{-R^2 + R(a^\dagger + a)} \int dI \space e^{-I^2 + iI(a^\dagger -a)}:\\
+&amp;=\space :\frac{1}{\pi} \int dR \space e^{-[R-\frac{1}{2}(a^\dagger+a)]^2 + \frac{1}{4}(a^\dagger+a)^2} \int dI \space e^{-[I-\frac{i}{2}(a^\dagger - a)]^2-\frac{1}{4}(a^\dagger-a)^2}:\\
+&amp;=\space : \frac{1}{\pi}\space e^{\frac{1}{4}(a^\dagger+a)^2-\frac{1}{4}(a^\dagger-a)^2}\int d\tilde{R}\space e^{-\tilde R^2} \int d\tilde{I}\space e^{-\tilde I^2}:\\
+&amp;=\space : \space e^{\frac{1}{4}(a^\dagger+a)^2-\frac{1}{4}(a^\dagger-a)^2}:
+\end{align*}\]
+
+<p>You might be pulling your hair wondering why I can just break up the exponential and recombine them as if they are just c-numbers instead of operators (normally this would introduce new terms using the BCH formula). So now it’s time for me to ask for forgiveness. Observe that initially the identity is normal-ordered: i.e. all the raising operators are to the left, whereas all the lowering operators are to the right. Therefore, the apparent ordering of the above expressions doesn’t matter; they are all actually in disguise of a normal-ordered product of operators. That’s why I surrounds the expression by colons, to signify that it is in normal ordering.</p>
+
+<p>So let’s restore the normal ordering. This means that we are free to move all the raising operators to the left and all the lower operators to the right without introducing commutator terms in the above expression:</p>
+
+\[\begin{align*}
+''RHS'' &amp;=\space : e^{\frac{1}{4}(a^\dagger+a)^2-\frac{1}{4}(a^\dagger-a)^2}: \\
+&amp;= \space :e^{\frac{1}{2}a^\dagger a + \frac{1}{2}a^\dagger a}: \\
+&amp;= \space :e^{a^\dagger a}:
+\end{align*}\]
+
+<p>Finally, we need to be careful about how \(e^{a^\dagger a}\) acts on the projector \(\ket{0}\bra{0}\). All the raising operators must be to the left of \(\ket{0}\bra{0}\), whereas all the lowering operators must be to the right of \(\ket{0}\bra{0}\). So we expand the exponential acting on \(\ket{0}\bra{0}\) that respects the normal-order:</p>
+
+\[\begin{align*}
+\space e^{a^\dagger a} \text{ (acts on) } \ket{0}\bra{0} &amp;=  \sum_{n=0}^{\infty} \frac{1}{n!}(a^\dagger)^n \ket{0}\bra{0} a^n\\
+RHS &amp;=  \sum_{n=0}^{\infty} \frac{1}{n!}\sqrt{n!} \ket{n}\bra{n} \sqrt{n!} \quad \quad \quad \text{since }a^\dagger \ket{n} = \sqrt{n+1} \ket{n+1}\\
+&amp;=  \sum_{n=0}^{\infty}\ket{n}\bra{n}\\
+&amp;= \mathbb{1}
+\end{align*}\]
+
+<p>Q.E.D.</p>
+
+<h2 id="reflection">Reflection</h2>
+
+<p>When I first work it out it is just to see where things go without worrying too much about correctness (since I was pretty clueless lol). But in retrospect, the validity of this method lies in the normal-ordering of the operators in the RHS of the identity. Even though completing the square seems to scramble the ordering of the ladder operators, as long as we assert that at the end we have to recover the normal-ordered operators again, then we are safe.</p>
+
+<p>It is important to note that I am not applying the normal ordering as an operation. If one tries to normal order an equation that wasn’t originally in normal order, we can get non-sensical results such as the following (due to S. Coleman):</p>
+
+\[a^\dagger a = a a^\dagger -1  \xrightarrow{?} :a^\dagger a:\space =\space : a a^\dagger : -1 \implies a^\dagger a = a^\dagger a -1 \implies 0 = -1.\]
+
+<p>Instead, I start with an expression that is already in normal order, do the Gaussian integrals that apparently scramble the normal order, but insist in the end that it is still in normal order.</p>
+
 
   </article>
+
+  
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'leo-academic-blog';
+      var disqus_identifier = '/blog/2022/operator-valued-Gaussian-integrals';
+      var disqus_title      = "An Unconventional Way in evaluating operator-valued Gaussian integrals";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+  
 
 </div>
 

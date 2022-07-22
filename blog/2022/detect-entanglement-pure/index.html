@@ -12,7 +12,7 @@
   Chiu Fan Bowen "Leo" Lo
 
 
-  | blog
+  | How to detect entanglement in pure state (very rough draft)
 
 </title>
 <meta name="description" content="This is the academic profile page of Chiu Fan Bowen (Leo) Lo.
@@ -38,7 +38,7 @@
 <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>💡</text></svg>">
 
 <link rel="stylesheet" href="/assets/css/main.css">
-<link rel="canonical" href="Leo-Lo.github.io/blog/">
+<link rel="canonical" href="Leo-Lo.github.io/blog/2022/detect-entanglement-pure/">
 
 
 <!-- Dark Mode -->
@@ -84,14 +84,10 @@
             <a class="nav-link" href="/blog/">
               blog
               
-              <span class="sr-only">(current)</span>
-              
             </a>
           </li>
           
           <!-- Other pages -->
-          
-          
           
           
           
@@ -173,8 +169,8 @@
           
           
           
-            <div class = "toggle-container">
-              <a id = "light-toggle">
+            <div class="toggle-container">
+              <a id="light-toggle">
                   <i class="fas fa-moon"></i>
                   <i class="fas fa-sun"></i>
               </a>
@@ -191,171 +187,118 @@
     <!-- Content -->
 
     <div class="container mt-5">
-      <div class="post">
-
-  <div class="header-bar">
-    <h1>Condensed Thoughts</h1>
-    <h2>On physics, math, and other interesting things</h2>
-  </div>
+      
 
 
-  <ul class="post-list">
-    
 
-    
-    
-    
-    
 
-    <li>
-      <h3><a class="post-title" href="/blog/2022/operator-valued-Gaussian-integrals/">An Unconventional Way in evaluating operator-valued Gaussian integrals</a>
-      </h3>
-      <p>To hell with ordering at first, and ask for forgiveness later.</p>
-      <p class="post-meta"> 4 min read &nbsp; &middot; &nbsp;
-        July 19, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
 
+<div class="post">
+
+  <header class="post-header">
+    <h1 class="post-title">How to detect entanglement in pure state (very rough draft)</h1>
+    <p class="post-meta">January 1, 2022</p>
+    <p class="post-tags">
+      <a href="/blog/2022"> <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+      
+        ·  
+        
+        <a href="/blog/tag/quantum-information">
+          <i class="fas fa-hashtag fa-sm"></i> quantum-information</a>  
           
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/exposition">
-              <i class="fas fa-hashtag fa-sm"></i> exposition</a> &nbsp;
-              
-            <a href="/blog/tag/reference">
-              <i class="fas fa-hashtag fa-sm"></i> reference</a> &nbsp;
-              
-            <a href="/blog/tag/operator-algebra">
-              <i class="fas fa-hashtag fa-sm"></i> operator-algebra</a> &nbsp;
-              
+        <a href="/blog/tag/exposition">
+          <i class="fas fa-hashtag fa-sm"></i> exposition</a>  
           
+        <a href="/blog/tag/draft">
+          <i class="fas fa-hashtag fa-sm"></i> draft</a>  
+          
+      
 
+      
+        ·  
+        
+        <a href="/blog/category/physics">
+          <i class="fas fa-tag fa-sm"></i> physics</a>  
           
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/physics">
-              <i class="fas fa-tag fa-sm"></i> physics</a> &nbsp;
-              
-            <a href="/blog/category/math">
-              <i class="fas fa-tag fa-sm"></i> math</a> &nbsp;
-              
-          
+      
+
     </p>
-    </li>
+  </header>
 
-    
+  <article class="post-content">
+    <p>(Warning: This post is incomplete)</p>
 
-    
-    
-    
-    
+<p>As an example, I will now show that one of the <a href="https://en.wikipedia.org/wiki/Bell_state" target="_blank" rel="noopener noreferrer">Bell states</a> (sometimes also called the EPR pairs)</p>
 
-    <li>
-      <h3><a class="post-title" href="/blog/2022/Christofel-symbol/">Christofel symbol</a>
-      </h3>
-      <p>A nice little derivation</p>
-      <p class="post-meta"> 2 min read &nbsp; &middot; &nbsp;
-        April 1, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+<p>\begin{equation}
+\ket{EPR}= \frac{1}{\sqrt{2}}\left(\ket{00}+\ket{11}\right)
+\end{equation}</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/exposition">
-              <i class="fas fa-hashtag fa-sm"></i> exposition</a> &nbsp;
-              
-            <a href="/blog/tag/reference">
-              <i class="fas fa-hashtag fa-sm"></i> reference</a> &nbsp;
-              
-            <a href="/blog/tag/general-relativity">
-              <i class="fas fa-hashtag fa-sm"></i> general-relativity</a> &nbsp;
-              
-          
+<p>is entangled state, using both approach mentioned above. I will use the density matrix formalism, since the second approach (which involves calculating the Von Neumann entropy) hinges on the density matrix formalism. In this formalism, the density matrix representing the state is</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/physics">
-              <i class="fas fa-tag fa-sm"></i> physics</a> &nbsp;
-              
-            <a href="/blog/category/math">
-              <i class="fas fa-tag fa-sm"></i> math</a> &nbsp;
-              
-          
-    </p>
-    </li>
+\[\rho_{EPR} = \ket{EPR}\bra{EPR} =
+\begin{pmatrix}
+1/2 &amp; 0 &amp; 0 &amp; 1/2 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+1/2 &amp; 0 &amp; 0 &amp; 1/2
+\end{pmatrix}\]
 
-    
+<p>where the indexing of the 4 entries are \(\ket{00},\ket{01},\ket{10},\ket{11}\).</p>
 
-    
-    
-    
-    
+<p>An important identity we need to know is that in density matrix formalism, the expectation value is obtained by</p>
 
-    <li>
-      <h3><a class="post-title" href="/blog/2022/fourier/">Taking complex conjugate of Fourier transform</a>
-      </h3>
-      <p>First the wrong way, then the right way</p>
-      <p class="post-meta"> 2 min read &nbsp; &middot; &nbsp;
-        March 30, 2022
-      </p>
-      <p class="post-tags">
-        <a href="/blog/2022">
-          <i class="fas fa-calendar fa-sm"></i> 2022 </a>
+\[\begin{align*}
+\bra{\psi} \mathcal O \ket{\psi} = Tr (\mathcal O \rho)
+&amp;= 
+\end{align*}\]
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/tag/reference">
-              <i class="fas fa-hashtag fa-sm"></i> reference</a> &nbsp;
-              
-          
+<p>where \(\rho\) is the density matrix for the state \(\ket{\psi}\); the above equality can be demonstrated using the cyclic property of trace.</p>
 
-          
-          &nbsp; &middot; &nbsp;
-            
-            <a href="/blog/category/analysis">
-              <i class="fas fa-tag fa-sm"></i> analysis</a> &nbsp;
-              
-            <a href="/blog/category/math">
-              <i class="fas fa-tag fa-sm"></i> math</a> &nbsp;
-              
-          
-    </p>
-    </li>
+<h3 id="2nd-approach-relative-von-neumann-entropy-of-reduced-density-matrices">2nd approach: Relative Von Neumann entropy of reduced density matrices</h3>
 
-    
-  </ul>
+<p>First of all, we will use the following fact:</p>
+<ul>
+  <li>Von Neumann entropy of a state \(\rho\) is given by \(S = - \Tr(\rho \log \rho) = -sum_i (\lambda_i \log \lambda_i)\), where \(\lambda_i\) are the eigenvalues of the density matrix \(\rho\)</li>
+  <li>Von Neumann entropy of a pure state is zero. Check it!</li>
+  <li>
+</ul>
+
+<p>We will proceed in 2 steps: 1) obtain the reduced density matrix of a subsystem of just 1 spin, 2) calculate the Von Neumann entropy of the subsystem.</p>
+
+<p>The reduced density matrix can be obtained using partial trace (WLOG, we partial trace away the 2nd qubit to obtain the reduced density matrix of the 1st qubit):</p>
+
+\[\begin{align*}
+\rho_1 &amp;= \Tr_2(\rho_{EPR})\\
+&amp;= \Tr_2(\frac{1}{2}\ket{00}\bra{00} + \frac{1}{2}\ket{00}\bra{11} + \frac{1}{2}\ket{11}\bra{00} + \frac{1}{2}\ket{11}\bra{11}\\
+&amp;= \frac{1}{2}\braket{0|0}\ket{0}\bra{0} + \frac{1}{2}\braket{0|1}\ket{0}\bra{1} + \frac{1}{2}\braket{1|0}\ket{1}\bra{0} + \frac{1}{2}\braket{1|1}\ket{1}\bra{1}\\
+&amp;= \frac{1}{2}\ket{0}\bra{0} + \frac{1}{2}\ket{1}\bra{1}
+\end{align*}\]
+
+<p>Then we calculate the Von Neumann entropy
+\(\begin{align*}
+S &amp;= -\Tr(\rho_1 \log \rho_1)\\
+&amp;= \sum_i \Tr(\lambda_i \log \lambda_i) \quad \quad \quad \text{where $\lambda_i$ are the eigenvalues of $\rho_1$}\\
+&amp;= \log 2
+\end{align*}\)</p>
+
+  </article>
 
   
-<nav aria-label="Blog page naviation">
-  <ul class="pagination pagination-lg justify-content-center">
-    <li class="page-item disabled">
-      <a class="page-link" href="" tabindex="-1" aria-disabled="">Newer</a>
-    </li>
-    
-      
-        <li class="page-item active"><a class="page-link" href="/blog/index.html" title="blog">1</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/2/index.html" title="blog - page 2">2</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/3/index.html" title="blog - page 3">3</a></li>
-      
-        <li class="page-item "><a class="page-link" href="/blog/page/4/index.html" title="blog - page 4">4</a></li>
-      
-    
-    <li class="page-item ">
-      <a class="page-link" href="/blog/page/2/">Older</a>
-    </li>
-  </ul>
-</nav>
-
-
+    <div id="disqus_thread"></div>
+    <script type="text/javascript">
+      var disqus_shortname  = 'leo-academic-blog';
+      var disqus_identifier = '/blog/2022/detect-entanglement-pure';
+      var disqus_title      = "How to detect entanglement in pure state (very rough draft)";
+      (function() {
+        var dsq = document.createElement('script'); dsq.type = 'text/javascript'; dsq.async = true;
+        dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+        (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+      })();
+    </script>
+    <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript" target="_blank" rel="noopener noreferrer">comments powered by Disqus.</a>
+</noscript>
+  
 
 </div>
 
@@ -366,8 +309,8 @@
     
 <footer class="fixed-bottom">
   <div class="container mt-0">
-    &copy; Copyright 2022 Chiu Fan Bowen  Lo.
-    Powered by <a href="http://jekyllrb.com/" target="_blank">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank">GitHub Pages</a>. Protected by a topological invariant. 
+    © Copyright 2022 Chiu Fan Bowen  Lo.
+    Powered by <a href="http://jekyllrb.com/" target="_blank" rel="noopener noreferrer">Jekyll</a> with <a href="https://github.com/alshedivat/al-folio" target="_blank" rel="noopener noreferrer">al-folio</a> theme. Hosted by <a href="https://pages.github.com/" target="_blank" rel="noopener noreferrer">GitHub Pages</a>. Protected by a topological invariant. 
 
     
     

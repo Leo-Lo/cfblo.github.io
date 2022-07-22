@@ -1,0 +1,408 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en"><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="Leo-Lo.github.io/feed.xml" rel="self" type="application/atom+xml" /><link href="Leo-Lo.github.io/" rel="alternate" type="text/html" hreflang="en" /><updated>2022-07-22T22:16:06+00:00</updated><id>Leo-Lo.github.io/feed.xml</id><title type="html">Chiu Fan Bowen “Leo” Lo</title><subtitle>This is the academic profile page of Chiu Fan Bowen (Leo) Lo.
+</subtitle><entry><title type="html">An Unconventional Way in evaluating operator-valued Gaussian integrals</title><link href="Leo-Lo.github.io/blog/2022/operator-valued-Gaussian-integrals/" rel="alternate" type="text/html" title="An Unconventional Way in evaluating operator-valued Gaussian integrals" /><published>2022-07-19T00:00:00+00:00</published><updated>2022-07-19T00:00:00+00:00</updated><id>Leo-Lo.github.io/blog/2022/operator-valued-Gaussian-integrals</id><content type="html" xml:base="Leo-Lo.github.io/blog/2022/operator-valued-Gaussian-integrals/"><![CDATA[<p>I want to prove the following resolution to the identity:</p>
+
+\[\mathbb 1 = \frac{1}{\pi} \int d^2\alpha\space \ket{\alpha} \bra{\alpha}\]
+
+<p>where \(d^2\alpha = d\mathbb{Re}(\alpha) d\mathbb{Im}(\alpha)= \frac{1}{2}d\alpha d\bar\alpha\), and the state \(\ket{\alpha} = e^{-\mid \alpha\mid^2/2}e^{\alpha a^\dagger} \ket{0}\) denotes a coherent state.</p>
+
+<h2 id="my-unconventional-method">My unconventional method</h2>
+
+<p>The main idea of the method can be captured by the slogan “to hell with ordering at first, and ask for forgiveness later.” We first massage the RHS into the form</p>
+
+\[\begin{align*}
+RHS &amp;=\frac{1}{2 \pi} \int d\alpha \space d\bar\alpha \space e^{-|\alpha|^2} e^{\alpha a^\dagger} \ket{0}\bra{0} e^{\bar\alpha a}\\
+&amp;= \frac{1}{\pi}\int  dR \space dI \space e^{- R^2-I^2} e^{(R+iI) a^\dagger} \ket{0}\bra{0} e^{(R-iI) a}
+\end{align*}\]
+
+<p>where I have defined \(R\equiv \mathbb{Re}(\alpha), I=\mathbb{Im}(\alpha)\) to simplify notation.</p>
+
+<p>Observe that the above integral is a Gaussian integral waiting to be completed the square, except it is obstructed by the ladder operators. Nonetheless, we say, to hell with ordering, let’s complete the square directly (and omit the projector \(\ket{0}\bra{0}\) for now).</p>
+
+\[\begin{align*}
+RHS &amp;=\space:\frac{1}{\pi} \int dR\space dI \space e^{-R^2 + R(a^\dagger + a)-I^2 + iI(a^\dagger -a)}:\\
+&amp;=\space :\frac{1}{\pi}\int dR \space e^{-R^2 + R(a^\dagger + a)} \int dI \space e^{-I^2 + iI(a^\dagger -a)}:\\
+&amp;=\space :\frac{1}{\pi} \int dR \space e^{-[R-\frac{1}{2}(a^\dagger+a)]^2 + \frac{1}{4}(a^\dagger+a)^2} \int dI \space e^{-[I-\frac{i}{2}(a^\dagger - a)]^2-\frac{1}{4}(a^\dagger-a)^2}:\\
+&amp;=\space : \frac{1}{\pi}\space e^{\frac{1}{4}(a^\dagger+a)^2-\frac{1}{4}(a^\dagger-a)^2}\int d\tilde{R}\space e^{-\tilde R^2} \int d\tilde{I}\space e^{-\tilde I^2}:\\
+&amp;=\space : \space e^{\frac{1}{4}(a^\dagger+a)^2-\frac{1}{4}(a^\dagger-a)^2}:
+\end{align*}\]
+
+<p>You might be pulling your hair wondering why I can just break up the exponential and recombine them as if they are just c-numbers instead of operators (normally this would introduce new terms using the BCH formula). So now it’s time for me to ask for forgiveness. Observe that initially the identity is normal-ordered: i.e. all the raising operators are to the left, whereas all the lowering operators are to the right. Therefore, the apparent ordering of the above expressions doesn’t matter; they are all actually in disguise of a normal-ordered product of operators. That’s why I surrounds the expression by colons, to signify that it is in normal ordering.</p>
+
+<p>So let’s restore the normal ordering. This means that we are free to move all the raising operators to the left and all the lower operators to the right without introducing commutator terms in the above expression:</p>
+
+\[\begin{align*}
+''RHS'' &amp;=\space : e^{\frac{1}{4}(a^\dagger+a)^2-\frac{1}{4}(a^\dagger-a)^2}: \\
+&amp;= \space :e^{\frac{1}{2}a^\dagger a + \frac{1}{2}a^\dagger a}: \\
+&amp;= \space :e^{a^\dagger a}:
+\end{align*}\]
+
+<p>Finally, we need to be careful about how \(e^{a^\dagger a}\) acts on the projector \(\ket{0}\bra{0}\). All the raising operators must be to the left of \(\ket{0}\bra{0}\), whereas all the lowering operators must be to the right of \(\ket{0}\bra{0}\). So we expand the exponential acting on \(\ket{0}\bra{0}\) that respects the normal-order:</p>
+
+\[\begin{align*}
+\space e^{a^\dagger a} \text{ (acts on) } \ket{0}\bra{0} &amp;=  \sum_{n=0}^{\infty} \frac{1}{n!}(a^\dagger)^n \ket{0}\bra{0} a^n\\
+RHS &amp;=  \sum_{n=0}^{\infty} \frac{1}{n!}\sqrt{n!} \ket{n}\bra{n} \sqrt{n!} \quad \quad \quad \text{since }a^\dagger \ket{n} = \sqrt{n+1} \ket{n+1}\\
+&amp;=  \sum_{n=0}^{\infty}\ket{n}\bra{n}\\
+&amp;= \mathbb{1}
+\end{align*}\]
+
+<p>Q.E.D.</p>
+
+<h2 id="reflection">Reflection</h2>
+
+<p>When I first work it out it is just to see where things go without worrying too much about correctness (since I was pretty clueless lol). But in retrospect, the validity of this method lies in the normal-ordering of the operators in the RHS of the identity. Even though completing the square seems to scramble the ordering of the ladder operators, as long as we assert that at the end we have to recover the normal-ordered operators again, then we are safe.</p>
+
+<p>It is important to note that I am not applying the normal ordering as an operation. If one tries to normal order an equation that wasn’t originally in normal order, we can get non-sensical results such as the following (due to S. Coleman):</p>
+
+\[a^\dagger a = a a^\dagger -1  \xrightarrow{?} :a^\dagger a:\space =\space : a a^\dagger : -1 \implies a^\dagger a = a^\dagger a -1 \implies 0 = -1.\]
+
+<p>Instead, I start with an expression that is already in normal order, do the Gaussian integrals that apparently scramble the normal order, but insist in the end that it is still in normal order.</p>]]></content><author><name></name></author><category term="physics" /><category term="math" /><category term="exposition" /><category term="reference" /><category term="operator-algebra" /><summary type="html"><![CDATA[To hell with ordering at first, and ask for forgiveness later.]]></summary></entry><entry><title type="html">Christofel symbol</title><link href="Leo-Lo.github.io/blog/2022/Christofel-symbol/" rel="alternate" type="text/html" title="Christofel symbol" /><published>2022-04-01T00:00:00+00:00</published><updated>2022-04-01T00:00:00+00:00</updated><id>Leo-Lo.github.io/blog/2022/Christofel-symbol</id><content type="html" xml:base="Leo-Lo.github.io/blog/2022/Christofel-symbol/"><![CDATA[<h1 id="christofel-symbol">Christofel symbol</h1>
+
+<p>I will derive the Christofel symbol. I learned this derivation from Andrei Boloborodov’s course on General Relativity, which imo better motivate the use of Christofel symbol than that presented in Sean Carroll’s book.</p>
+
+<h2 id="motivation">Motivation</h2>
+
+<p>Why do we need the Christofel symbol? It arises in the context of taking derivative on a general manifold—the partial derivative \(\partial_\mu\) does not give a tensorial quantity, and usually we only work with tensors because they transform nicely under the group action (e.g. Lorentz group in general relativity). So the Christofel symbol is introduced to cancel out with the nontensorial part of the partial derivative.</p>
+
+<h2 id="concept">Concept</h2>
+
+<p>A vector \(\vec V\) is an invariant object, in the sense that it is independent of the choice of basis. Whereas the component of a vector \(V_i\) is dependent on the choice of basis. When learning index notation, we usually abuse notation and call the component \(V_i\) the vector, but it is actually the key in this derivation to distinguish between the two.</p>
+
+<h2 id="derivation">Derivation</h2>
+
+\[\begin{align*}
+\partial_\mu \vec V &amp;= \partial_\mu (V^\nu \hat e_\nu)\\
+&amp;= (\partial_\mu V^\nu)\hat e_\nu + V^\nu (\partial_\mu \hat e_\nu)\\
+&amp;\equiv (\partial_\mu V^\lambda)\hat e_\lambda + V^\nu \Gamma_{\mu\nu}^{\lambda}\hat e_\lambda\\
+\partial (V^\lambda \hat e_\lambda)&amp;= (\partial_\mu V^\lambda + V^\nu \Gamma_{\mu\nu}^{\lambda})\hat e_\lambda
+\end{align*}\]
+
+<p>where we use the product rule in the 2nd equality, we switch the dummy index \(\nu\rightarrow \lambda\) for the first term, and for the second term we define the Christofel symbol to be
+\(\Gamma^\lambda_{\mu\nu} \hat e_{\lambda} \equiv \partial_\mu \hat e_{\nu}.\)
+such that we can factor out the unit vector \(\hat e_\lambda\) for the last equality.</p>
+
+<p>At the end, we arrive at the definition of a covariant derivative (which acts on just the components of a vector, not the entire vector):
+\(\begin{equation}
+\nabla_\mu V^\nu = \partial_\mu V^\nu + \Gamma^\nu_{\mu\lambda} V^\lambda
+\end{equation}\)</p>]]></content><author><name></name></author><category term="physics" /><category term="math" /><category term="exposition" /><category term="reference" /><category term="general-relativity" /><summary type="html"><![CDATA[A nice little derivation]]></summary></entry><entry><title type="html">Taking complex conjugate of Fourier transform</title><link href="Leo-Lo.github.io/blog/2022/fourier/" rel="alternate" type="text/html" title="Taking complex conjugate of Fourier transform" /><published>2022-03-30T00:00:00+00:00</published><updated>2022-03-30T00:00:00+00:00</updated><id>Leo-Lo.github.io/blog/2022/fourier</id><content type="html" xml:base="Leo-Lo.github.io/blog/2022/fourier/"><![CDATA[<h1 id="complex-conjugate-of-fourier-coefficient">Complex conjugate of Fourier coefficient</h1>
+
+<p>Given the (inverse) Fourier transform \(F(x) = \frac{1}{\sqrt{2\pi}} \int dk \space \tilde{F}(k) e^{ikx}\), I will show that the complex conjugate of Fourier coefficient can be expressed as 
+\(\tilde{F}^\ast(k) = \tilde{F}(-k).\)</p>
+
+<h2 id="motivation">Motivation</h2>
+<p>Why do we want this result? This is because you can convert any complex function \(f^\ast(x)\) you obtained from Fourier transform into a real function with a negative parameter, \(f(-x)\). So you don’t need to panic when you get complex quantities in your results.</p>
+
+<h2 id="original-wrong-derivation">Original wrong derivation</h2>
+
+<p>We take the complex conjugate of Eq. 1 to obtain
+\(F^\ast(x) = \frac{1}{\sqrt{2\pi}} \int dk \space \tilde{F}^\ast(k) e^{-ikx}.\)
+Next, treating \(F^\ast(x)\) as just another function of \(x\), and directly do Fourier transform on it to obtain
+\(\begin{align}
+    F^\ast(x) &amp;= \frac{1}{\sqrt{2\pi}} \int dk' \tilde{F}(k') e^{ik'x}\\
+    &amp;= \int d(-k) \tilde{F}(-k) e^{-ikx}.
+\end{align}\)
+In the second equality sign, I did a change of variable \(k'\rightarrow -k\), motivated by the fact that after this change, the exponential factor looks the same as that in Eq. 2, and we can directly equate Eq. 2 with Eq. 4 to obtain</p>
+
+\[\begin{align*}
+    \frac{1}{\sqrt{2\pi}} \int dk \tilde{F}^\ast(k) e^{-ikx} &amp;= \frac{1}{\sqrt{2\pi}} \int dk' \tilde{F}(k') e^{ik'x}\\
+    \tilde{F}^\ast(k) &amp;= \tilde{F}(-k).
+\end{align*}\]
+
+<h3 id="why-it-is-wrong">Why it is wrong</h3>
+
+<p>We used a sleight-of-hand: the Fourier transform of \(F^\ast(x)\), since we are treating it as an independnet function, is not necessarily \(\tilde{F}(k')\) itself, but instead some other function \(G(k')\) that is not necessarily related to \(\tilde{F}(k')\).</p>
+
+<h2 id="updated-correct-derivation">Updated correct derivation</h2>
+
+<p>We take the complex conjugate of Eq. 1 to obtain
+\(F^\ast(x) = \frac{1}{\sqrt{2\pi}} \int dk\space \tilde{F}^\ast(k) e^{-ikx}\)
+By the reality condition of $F(x)$, we have 
+\(F(x) = F^\ast(x)\)
+We change the dummy integration variable for Eq. 1 to get</p>
+
+\[\begin{align*}
+F(x)&amp;=\frac{1}{\sqrt{2\pi}} \int d(-k) \space \tilde{F}(-k) e^{-ikx}\\
+&amp;=\frac{1}{\sqrt{2\pi}} \int dk \space \tilde{F}(-k) e^{-ikx}\\
+\end{align*}\]
+
+<p>where for the 2nd equality sign, we replace \(d(-k)\rightarrow dk\) since the integration domain is symmetric (from \(-\infty\) to \(\infty\)).</p>
+
+<p>Combining the above 3 equations, we finally obtain the desired result</p>
+
+\[\begin{align*}
+\frac{1}{\sqrt{2\pi}} \int dk\space \tilde{F}^*(k) e^{-ikx} &amp;= \frac{1}{\sqrt{2\pi}} \int dk \space \tilde{F}(-k) e^{-ikx}\\
+\tilde{F}^*(k) &amp;= \tilde{F}(-k)
+\end{align*}\]]]></content><author><name></name></author><category term="analysis" /><category term="math" /><category term="reference" /><summary type="html"><![CDATA[First the wrong way, then the right way]]></summary></entry><entry><title type="html">Tight-binding convention</title><link href="Leo-Lo.github.io/blog/2022/tight-binding-convention/" rel="alternate" type="text/html" title="Tight-binding convention" /><published>2022-03-24T00:00:00+00:00</published><updated>2022-03-24T00:00:00+00:00</updated><id>Leo-Lo.github.io/blog/2022/tight-binding-convention</id><content type="html" xml:base="Leo-Lo.github.io/blog/2022/tight-binding-convention/"><![CDATA[<p>In second quantized notation, a tight-binding Hamiltonian is given by 
+\(H=\sum_{\boldsymbol{R}} c^\dagger_{\boldsymbol R \alpha} h_{\alpha\beta}(\boldsymbol R) c_{\boldsymbol R \beta} = \sum_{\boldsymbol{R}}\vec{c}^\dagger_{\boldsymbol R} h(\boldsymbol R) \vec{c}_{\boldsymbol R}.\)</p>
+
+<p>To diagonalize it, we need to transform to the Fourier basis. Below is the convention for (inverse) Fourier transform
+\(\begin{align*} c_{\boldsymbol R} &amp;= \frac{1}{\sqrt{N}}\sum_{\boldsymbol k} e^{i\boldsymbol k \cdot \boldsymbol R} c_{\boldsymbol k} \quad \quad \quad &amp; c_{\boldsymbol k} = \frac{1}{\sqrt{N}}\sum_{\boldsymbol R} e^{-i\boldsymbol k \cdot \boldsymbol R} c_{\boldsymbol R}\\c^\dagger_{\boldsymbol R} &amp;= \frac{1}{\sqrt{N}}\sum_{\boldsymbol k} e^{-i\boldsymbol k \cdot \boldsymbol R} c^\dagger_{\boldsymbol k} \quad \quad \quad &amp; c^\dagger_{\boldsymbol k} = \frac{1}{\sqrt{N}}\sum_{\boldsymbol R} e^{i\boldsymbol k \cdot \boldsymbol R} c^\dagger_{\boldsymbol R} \end{align*}\)</p>
+
+<p>And the definition of Kronecker delta is
+\(\delta_{\boldsymbol{k}\boldsymbol{k’}} = \frac{1}{N} \sum_{\boldsymbol R} e^{i(\boldsymbol k - \boldsymbol k’) \cdot \boldsymbol R}.\)
+That’s it. Now I don’t ever need to go back to textbook/random scribbled notes to check the sign convention I should use.</p>]]></content><author><name></name></author><category term="physics" /><category term="condensed-matter" /><category term="reference" /><summary type="html"><![CDATA[Fourier transform convention for the 2nd quantized operators]]></summary></entry><entry><title type="html">The first isomorphism theorem (incomplete)</title><link href="Leo-Lo.github.io/blog/2022/1st-isomorphism-theorem/" rel="alternate" type="text/html" title="The first isomorphism theorem (incomplete)" /><published>2022-01-21T00:00:00+00:00</published><updated>2022-01-21T00:00:00+00:00</updated><id>Leo-Lo.github.io/blog/2022/1st-isomorphism-theorem</id><content type="html" xml:base="Leo-Lo.github.io/blog/2022/1st-isomorphism-theorem/"><![CDATA[<h1 id="motivation">Motivation</h1>
+
+<p>As I often forget how to prove the isomorphism theorems in group theory, here is one (in all painstaking details) for the record.</p>
+
+<h1 id="theorem-statement">Theorem statement</h1>
+
+<p>Given a homomorphism \(\Phi: G \rightarrow H\), then</p>
+<ul>
+  <li>(1) \(\text{ker}(\Phi)\trianglelefteq G\)</li>
+  <li>(2) \(G/\text{ker}(\Phi) \equiv \text{im}(\Phi)\)</li>
+</ul>
+
+<h2 id="proof-of-1">Proof of (1)</h2>
+
+<p>We will follow a 3-step process:</p>
+<ul>
+  <li>1) Determine what is \(\text{ker}(\Phi)\) as a set.</li>
+  <li>2) Show \(\text{ker}(\Phi)\) is a group.</li>
+  <li>3) Show \(\text{ker}(\Phi)\) is a normal subgroup.</li>
+</ul>
+
+<h3 id="for-1">For 1)</h3>
+
+<table>
+  <tbody>
+    <tr>
+      <td>$$\text{ker}(\Phi)=\{g\in G</td>
+      <td>\Phi(g) = e_H\}\(, where\)e_H\(is an identity element in\)H$$.</td>
+    </tr>
+  </tbody>
+</table>
+
+<h3 id="for-2">For 2)</h3>
+
+<p>Check the group axioms:</p>
+<ul>
+  <li>Identity:</li>
+  <li>Inverse:</li>
+  <li>Associativity:</li>
+  <li>Closure:</li>
+</ul>]]></content><author><name></name></author><category term="math" /><category term="group-theory" /><category term="reference" /><summary type="html"><![CDATA[probably one of the most used theorem in group theory]]></summary></entry><entry><title type="html">The second isomorphism theorem</title><link href="Leo-Lo.github.io/blog/2022/2nd-isomorphism-theorem/" rel="alternate" type="text/html" title="The second isomorphism theorem" /><published>2022-01-20T00:00:00+00:00</published><updated>2022-01-20T00:00:00+00:00</updated><id>Leo-Lo.github.io/blog/2022/2nd-isomorphism-theorem</id><content type="html" xml:base="Leo-Lo.github.io/blog/2022/2nd-isomorphism-theorem/"><![CDATA[<h1 id="motivation">Motivation</h1>
+
+<p>As I often forget how to prove the second isomorphism theorem in group theory, here is one (in all painstaking details) for the record.</p>
+
+<h1 id="theorem-statement">Theorem statement</h1>
+
+<p>Given group \(G\), subgroup \(S\leq G\), normal subgroup \(N\trianglelefteq G\), then</p>
+<ul>
+  <li>(1) \(SN \leq G\)</li>
+  <li>(2) \(S\cap N \trianglelefteq S\)</li>
+  <li>(3) \((SN)/N \cong S/(S\cap N)\)</li>
+</ul>
+
+<h2 id="proof-of-1">Proof of (1)</h2>
+<p>First, to show that \(SN\) is a subset. \(SN=\{sn | s\in S, n\in N\}\). Since \(s\in G, n \in G\), by closure of group multiplication, \(sn\in G\), so \(SN\) is a subset of \(G\).</p>
+
+<p>Next, we need to show that \(SN\) is itself a group. Check the group axioms:</p>
+
+<ul>
+  <li>Identity: \(e\) is the identity element in \(SN\).</li>
+  <li>Inverse: Given \(sn \in SN\), then its inverse is \(n^{-1}s^{-1}\). Let \(n_3 = sn^{-1}s^{-1}\); since \(N\) is normal, \(n_3\in N\). Then the inverse element \(n^{-1}s^{-1}= s^{-1}n_3\), which is in \(SN\).</li>
+  <li>Associativity: Since \(s_in_i\) is an element in \(G\), by associativity of \(G\), \((s_1n_1\cdot s_2n_2)\cdot s_3n_3 = s_1n_1\cdot (s_2n_2\cdot s_3n_3)\)</li>
+  <li>Closure: Need to show \(s_1n_1s_2n_2 \in SN\). Let \(n_3 = s_2^{-1}n_1s_2\); by normality of \(N\), \(n_3\in N\). Then \(s_1n_1s_2n_2 = s_1 s_2 n_3 n_2\), which is manifestly in \(SN\).</li>
+</ul>
+
+<h2 id="proof-of-2">Proof of (2)</h2>
+<p>First, \(S\cap N\) is obviously a subset of \(S\).</p>
+
+<p>Next, to show that \(S\cap N\) is a group. Again check the group axioms:</p>
+
+<ul>
+  <li>Identity: \(e\in S\) and \(e\in N\), so identity exists.</li>
+  <li>Inverse: given \(k\in S\cap N\), \(k\in S\) implies \(k^{-1} \in S\); \(k \in N\) implies \(k^{-1} \in N\); hence \(k^{-1}\in S\cap N\).</li>
+  <li>Associativity: Obvious as group elements of \(G\).</li>
+  <li>Closure: Given \(k,p \in S\cap N\), then \(k\in S\) and \(p \in S\) implies \(kp \in S\); \(k\in S\) and \(p \in S\) implies \(kp \in N\). So \(kp \in S\cap N\).</li>
+</ul>
+
+<p>Last, to show that \(S\cap N\) is normal with respect to \(S\), need to show \(\forall k \in S\cap N, \forall s\in S, sks^{-1} \in S\cap N\). Since both \(s,k\in S, sks^{-1}\in S\). Since \(k\in N, s\in G\) and \(N \trianglelefteq G\), then \(sks^{-1} \in N\). So \(sks^{-1} \in S\cap N\).</p>
+
+<h2 id="proof-of-3">Proof of (3)</h2>
+
+<p>In order to form the quotient group \((SN)/N\), need to first show that \(N \trianglelefteq SN\). We already know \(N\) is a subset of \(SN\), and it is a group, so it remains to show the normality condition. \(\forall n'\in N, sn \in SN\), need to show \((sn) n' (sn)^{-1}=snn'n^{-1}s^{-1} \in N\). First insert pairs of \(s^{-1}s\) in between every elements of \(N\) to obtain \((s n s^{-1}) (s n' s^{-1})(s n^{-1} s^{-1})\). Since \(N \trianglelefteq G\), all three parathesized elements are in \(N\), and then use closure to conclude \((sn) n' (sn)^{-1}\in N\).</p>
+
+<p>Next, need to understand the group element in \((SN)/N\) and \(S/(S\cap N)\). \((SN)/N=\{[[sn] \in SN\}\), where the equivalence relation is given by \(s_1n_1 \sim s_2 n_2\) if \(\exists n\) such that \(s_1n_1 = n \cdot s_2n_2\).</p>
+
+<p>One strategy is to construct a homomorphism \((SN)/N \rightarrow S/(S\cap N)\), then show its inverse exists. Or show it is both injective and surjective. This requires quite a lot of low-level detail defining the homormophisms and proving their properties.</p>
+
+<p>A better strategy is to use the first isomorphism theorem: given a homomorphism \(h: G\rightarrow H\), then \(G/\text{ker}(h) = \text{Im}(h)\). I can choose a surjective homormophism such that either of</p>
+<ul>
+  <li>\(h: SN \rightarrow S/(S\cap N)\) such that \(\text{ker}(h)=N, \text{Im}(h) = S/(S\cap N)\)</li>
+  <li>\(h: S \rightarrow (SN)/N\) such that \(\text{ker}(h)=S\cap N, \text{Im}(h) = (SN)/N\)</li>
+</ul>
+
+<p>We will take the first option. Define the homomorphism \(h: SN \rightarrow S/(S\cap N)\) by \(h(sn) = [s]\), with the equivalence relation \(s_1\sim s_2\) if \(\exists n\in N\) such that \(s_1=n s_2\). This homomorphism is surjective since \(\forall [s]\in S/(S\cap N), \exists s\in S\) such that \(h(s)=[s]\). To find the kernel of the homomorphism, need to know what is in the equivalence class \([e]\), which by definition of \(S/(S\cap N)\), is \(N\). Then \(\forall n\in N, h(n) = [e]\). For \(s \in SN, s\notin N, h(s)=[s]\neq [e]\). Therefore, \(\text{ker}(h)=N\).</p>
+
+<p>Q.E.D.</p>]]></content><author><name></name></author><category term="math" /><category term="group-theory" /><category term="reference" /><summary type="html"><![CDATA[AKA the diamond theorem]]></summary></entry><entry><title type="html">Interesting transformation in quantum theories</title><link href="Leo-Lo.github.io/blog/2022/interesting-transformation/" rel="alternate" type="text/html" title="Interesting transformation in quantum theories" /><published>2022-01-11T00:00:00+00:00</published><updated>2022-01-11T00:00:00+00:00</updated><id>Leo-Lo.github.io/blog/2022/interesting-transformation</id><content type="html" xml:base="Leo-Lo.github.io/blog/2022/interesting-transformation/"><![CDATA[<h1 id="intro">Intro</h1>
+
+<p>There are a few interesting tranformation that appears in quantum theories.</p>
+
+<h1 id="the-list">The list</h1>
+
+<p><a href="https://en.m.wikipedia.org/wiki/Holstein%E2%80%93Primakoff_transformation"><strong>Holstein–Primakoff transformation</strong></a>: maps from bosonic ladder operators to spin operators</p>
+
+<p><a href="https://en.wikipedia.org/wiki/Jordan%E2%80%93Wigner_transformation"><strong>Jordon-Wigner transformation</strong></a>: maps from spin operators to fermionic ladder operators</p>
+
+<p>I purposely put the above two transformations together, as it begs the naive question: if we compose the two maps one after the other, does that mean there is a map from bosonic ladder operators to fermionic ladder operators? This smells like some supersymmetry.</p>
+
+<p><a href="https://en.m.wikipedia.org/wiki/Klein_transformation"><strong>Klein transformation</strong></a>: used to fix the (anti-)commutation relation between field operators such that the canonical (anti-)commutation relation is satisfied in accordance with the spin-statistics theorem.</p>
+
+<p><a href="https://en.m.wikipedia.org/wiki/Bogoliubov_transformation"><strong>Bogoliubov–Valatin transformation</strong></a>: maps from bosonic to bosonic or from fermionic to fermionic; it is used to diagonalize the BCS Hamiltonian.</p>
+
+<p><a href="https://en.m.wikipedia.org/wiki/Jordan_map"><strong>Jordan-Schwinger map</strong></a>: according to Wikipedia, it is “a map from matrices Mij to bilinear expressions of quantum oscillators which expedites computation of representations of Lie algebras occurring in physics”.</p>
+
+<p><a href="https://en.m.wikipedia.org/wiki/Schrieffer%E2%80%93Wolff_transformation"><strong>Schrieffer-Wolff transformation</strong></a>: This transformation is quite different from the previous ones. It is used to obtain the effective low-energy effective Hamiltonian, by diagonalize a Hamiltonian to 1st order in interaction. This is the operator version of the 2nd-order perturbation theory, where virtual-state is used to connect two low-energy states.</p>]]></content><author><name></name></author><category term="physics" /><category term="quantum-mechanics" /><category term="condensed-matter" /><category term="quantum-field-theory" /><summary type="html"><![CDATA[A list in progress]]></summary></entry><entry><title type="html">How to detect entanglement in pure state (very rough draft)</title><link href="Leo-Lo.github.io/blog/2022/detect-entanglement-pure/" rel="alternate" type="text/html" title="How to detect entanglement in pure state (very rough draft)" /><published>2022-01-01T00:00:00+00:00</published><updated>2022-01-01T00:00:00+00:00</updated><id>Leo-Lo.github.io/blog/2022/detect-entanglement-pure</id><content type="html" xml:base="Leo-Lo.github.io/blog/2022/detect-entanglement-pure/"><![CDATA[<p>(Warning: This post is incomplete)</p>
+
+<p>As an example, I will now show that one of the <a href="https://en.wikipedia.org/wiki/Bell_state">Bell states</a> (sometimes also called the EPR pairs)</p>
+
+<p>\begin{equation}
+\ket{EPR}= \frac{1}{\sqrt{2}}\left(\ket{00}+\ket{11}\right)
+\end{equation}</p>
+
+<p>is entangled state, using both approach mentioned above. I will use the density matrix formalism, since the second approach (which involves calculating the Von Neumann entropy) hinges on the density matrix formalism. In this formalism, the density matrix representing the state is</p>
+
+\[\rho_{EPR} = \ket{EPR}\bra{EPR} =
+\begin{pmatrix}
+1/2 &amp; 0 &amp; 0 &amp; 1/2 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+0 &amp; 0 &amp; 0 &amp; 0 \\
+1/2 &amp; 0 &amp; 0 &amp; 1/2
+\end{pmatrix}\]
+
+<p>where the indexing of the 4 entries are \(\ket{00},\ket{01},\ket{10},\ket{11}\).</p>
+
+<p>An important identity we need to know is that in density matrix formalism, the expectation value is obtained by</p>
+
+\[\begin{align*}
+\bra{\psi} \mathcal O \ket{\psi} = Tr (\mathcal O \rho)
+&amp;= 
+\end{align*}\]
+
+<p>where \(\rho\) is the density matrix for the state \(\ket{\psi}\); the above equality can be demonstrated using the cyclic property of trace.</p>
+
+<h3 id="2nd-approach-relative-von-neumann-entropy-of-reduced-density-matrices">2nd approach: Relative Von Neumann entropy of reduced density matrices</h3>
+
+<p>First of all, we will use the following fact:</p>
+<ul>
+  <li>Von Neumann entropy of a state \(\rho\) is given by \(S = - \Tr(\rho \log \rho) = -sum_i (\lambda_i \log \lambda_i)\), where \(\lambda_i\) are the eigenvalues of the density matrix \(\rho\)</li>
+  <li>Von Neumann entropy of a pure state is zero. Check it!</li>
+  <li></li>
+</ul>
+
+<p>We will proceed in 2 steps: 1) obtain the reduced density matrix of a subsystem of just 1 spin, 2) calculate the Von Neumann entropy of the subsystem.</p>
+
+<p>The reduced density matrix can be obtained using partial trace (WLOG, we partial trace away the 2nd qubit to obtain the reduced density matrix of the 1st qubit):</p>
+
+\[\begin{align*}
+\rho_1 &amp;= \Tr_2(\rho_{EPR})\\
+&amp;= \Tr_2(\frac{1}{2}\ket{00}\bra{00} + \frac{1}{2}\ket{00}\bra{11} + \frac{1}{2}\ket{11}\bra{00} + \frac{1}{2}\ket{11}\bra{11}\\
+&amp;= \frac{1}{2}\braket{0|0}\ket{0}\bra{0} + \frac{1}{2}\braket{0|1}\ket{0}\bra{1} + \frac{1}{2}\braket{1|0}\ket{1}\bra{0} + \frac{1}{2}\braket{1|1}\ket{1}\bra{1}\\
+&amp;= \frac{1}{2}\ket{0}\bra{0} + \frac{1}{2}\ket{1}\bra{1}
+\end{align*}\]
+
+<p>Then we calculate the Von Neumann entropy
+\(\begin{align*}
+S &amp;= -\Tr(\rho_1 \log \rho_1)\\
+&amp;= \sum_i \Tr(\lambda_i \log \lambda_i) \quad \quad \quad \text{where $\lambda_i$ are the eigenvalues of $\rho_1$}\\
+&amp;= \log 2
+\end{align*}\)</p>]]></content><author><name></name></author><category term="physics" /><category term="quantum-information" /><category term="exposition" /><category term="draft" /><summary type="html"><![CDATA[(Warning: This post is incomplete)]]></summary></entry><entry><title type="html">Entanglement polygamy is possible for qudits (draft)</title><link href="Leo-Lo.github.io/blog/2021/entanglement-polygamy-distill/" rel="alternate" type="text/html" title="Entanglement polygamy is possible for qudits (draft)" /><published>2021-12-31T00:00:00+00:00</published><updated>2021-12-31T00:00:00+00:00</updated><id>Leo-Lo.github.io/blog/2021/entanglement-polygamy-distill</id><content type="html" xml:base="Leo-Lo.github.io/blog/2021/entanglement-polygamy-distill/"><![CDATA[<p>(Warning: This post is incomplete)</p>
+
+<p><em>Assume reader background knowledge: quantum mechanics, 2-state system</em></p>
+
+<h2 id="intro">Intro</h2>
+
+<p>In condensed matter or quantum information textbooks, you may have encountered the concept <a href="https://en.wikipedia.org/wiki/Monogamy_of_entanglement"><strong>entanglement monogamy</strong></a>, which states that there can be at most two qubits that are maximally entangled; i.e. if two qubits are maximally entangled, you cannot entangle them with additional qubits.</p>
+
+<p>Now, it is easy to think that quantum particles in general exhibit entanglement monogamy; this turns out to be wrong. I made this mistake, that’s why I am writing this post to repend for my sins. In short, entanglement monogamy only applies to <em>qubits</em>, which are particles with two possible states. To circumvent entanglement monogamy, we will instead use <em>qu<strong>d</strong>its</em>, which are particles with \(d\) possible states. Then, it is in fact possible to maximally entangled arbitrary number of particles. I call this <strong>entanglement polygamy</strong>. This is the result we will arrive at by the end of this blogpost. For the experts, feel free to directly skip to the <a href="https://leo-lo.github.io/blog/2021/entanglement-polygamy-distill/#maximally-entangle-3-quantum-particles">Maximally entangle 3 quantum particles</a> section.</p>
+
+<h3 id="conventions">Conventions</h3>
+
+<p>Here are the convention I will use (feel free to skip this part now and come back to this when you see it used in the article.</p>
+
+<ul>
+  <li>The spin-1/2 angular momentum operators acts as \(S_i \ket{psi} = \frac{\hbar}{2} \sigma_i \ket{\psi}\).</li>
+  <li>For a qubits, the two possible states are \(\ket{\uparrow}\) and \(\ket{\downarrow}\) such that \(S_z \ket{\uparrow} = \frac{\hbar}{2} \ket{\uparrow}\) and \(S_z \ket{\downarrow} = -\frac{\hbar}{2} \ket{\downarrow}\).</li>
+  <li>For bipartite system, which can be expressed as a tensor product state, the operator are in general of the from \(\sum_{i,j} A_i \otimes B_j\).</li>
+</ul>
+
+<h2 id="maximally-entangled-defined">Maximally entangled defined</h2>
+
+<p>What does it mean for 2 qubits to be maximally entangled? Let \(\ket{\psi}\) be the state of representing the 2 qubits. We can measure the spin-spin correlation function \(\bra{\psi} S_i\otimes S_i \ket{\psi}\) in all 3 spatial directions (\(i=1,2,3\)) and see if the correlation function is maximized in <em>all 3</em> spatial directions. If all 3 are maximized, the 2 qubits are maximally entangled.</p>
+
+<h2 id="bell-state-example">Bell state example</h2>
+
+<p>I will now show that one of the <a href="https://en.wikipedia.org/wiki/Bell_state">Bell states</a> (sometimes also called the EPR pairs)</p>
+
+<p>\begin{equation}
+\ket{EPR}= \frac{1}{\sqrt{2}}\left(\ket{00}+\ket{11}\right)
+\end{equation}</p>
+
+<p>is a maximally entangled state (in fact, all 4 Bell states are maximally entangled).</p>
+
+<p>Working out the correlation function \(\langle S_x^{(1)}\otimes S_x^{(2)} \rangle\) explicitly:</p>
+
+\[\begin{align*}
+\langle S_x^{(1)}\otimes S_x^{(2)} \rangle = \bra{EPR} S_x^{(1)}\otimes S_x^{(2)} \ket{EPR} &amp;= \text{Tr} (S_x^{(1)}\otimes S_x^{(2)} \rho_{EPR})\\
+&amp;= \text{Tr} \left[\frac{1}{\sqrt{2}}\left(S_x^{(1)}\ket{0}\otimes S_x^{(2)}\ket{0} + S_x^{(1)}\ket{1}\otimes S_x^{(2)}\ket{1}\right)\bra{EPR}\right]\\
+&amp;= \frac{\hbar^2}{4} \text{Tr} \left[\frac{1}{\sqrt{2}}\left(\ket{1}\otimes \ket{1} + \ket{0}\otimes \ket{0}\right)\bra{EPR}\right]\\
+&amp;= \frac{\hbar^2}{4} \text{Tr} \left[\ket{EPR}\bra{EPR}\right]\\
+&amp;= \frac{\hbar^2}{4} \text{Tr} [\rho_{EPR}]\\
+&amp;= \frac{\hbar^2}{4}
+\end{align*}\]
+
+<p>The spin-spin correlation function is maximized, since it reports the value \(\frac{\hbar^2}{4}\), which means whenever one measure the 1st spin to have \(S_x\) expectation value \(\pm \frac{\hbar}{2}\), the 2nd spin would also have expectation value \(\pm \frac{\hbar}{2}\).</p>
+
+<p>The correlation function in the other 2 directions can be obtained in the same way, so I shall leave it as an exercise for the reader ;) What’s important is the result: in <strong>all 3 directions, the spin-spin correlation function is maximized</strong>. This is the indicator for a maximcally entangled spin state.</p>
+
+<p>As a side remark, having maximized spin-spin correlation functions in all spatial directions is not possible for any classical state. The best a classical state can do is a mixed state, e.g. \(\rho = \frac{1}{2} \ket{00}\bra{00} +\frac{1}{2} \ket{00}\bra{00}\), which maximized the spin-spin correlation function in 1 direction: \(\langle S_z^{(1)}\otimes S_z^{(2)} \rangle\); however, the x- and y- component of spin will be completely uncorrelated, i.e. , \(\langle S_x^{(1)}\otimes S_x^{(2)} \rangle = \langle S_y^{(1)}\otimes S_y^{(2)} \rangle = 0\).</p>
+
+<p>Another way to see that $\ket{EPR}$ is maximally entangled is that even though it is a pure state, the reduced density matrix is \(\rho = \frac{1}{2}\ket{0}\bra{0} + \frac{1}{2}\ket{1}\bra{1}\), which is a classical mixed state with maximal Von Neumann entropy.</p>
+
+<h2 id="maximally-entangle-3-quantum-particles">Maximally entangle 3 quantum particles</h2>
+
+<p>In order to maximally entangle 3 particles, my idea is to not restrict ourselves to just qubits (spin-1/2 particles), but use spin-1 particle. My claim is that the following state is maximally entangled</p>
+
+\[\ket{\psi} = \frac{1}{\sqrt{3}} (\ket{abc} + \ket{bca} + \ket{cab})\]
+
+<p>where \(a=-1, b=0, c=1\).</p>
+
+<p>Now, as a first indicator that it is maximally entangled, we note that the reduced density matrix for the 1-particle subsystem is \(\rho_1 =  \frac{1}{3}\ket{a}\bra{a} + \frac{1}{3}\ket{b}\bra{b} + \frac{1}{3}\ket{c}\bra{c}\), which is a classically maximally mixed state.</p>
+
+<p>We then calculate the spin-spin correlation function.</p>
+
+<p>To be continued…</p>
+
+<p>Addendum: For anyone who is interested in learning more about these materials, I highly recommend checking out <em>Quantum Computation and Quantum Information</em> by Michael Nielson and Isaac Chuang (or sometimes affectionately refered to as Mike &amp; Ike); it is very pedagogical on a lot of fascinating topics.</p>]]></content><author><name>Leo Lo</name></author><category term="physics" /><category term="quantum-information" /><category term="draft" /><category term="exposition" /><summary type="html"><![CDATA[Or, given more room, quantum particles enjoy more company.]]></summary></entry><entry><title type="html">Why do ghosts appear in gauge theories?</title><link href="Leo-Lo.github.io/blog/2021/why-ghost/" rel="alternate" type="text/html" title="Why do ghosts appear in gauge theories?" /><published>2021-10-31T00:00:00+00:00</published><updated>2021-10-31T00:00:00+00:00</updated><id>Leo-Lo.github.io/blog/2021/why-ghost</id><content type="html" xml:base="Leo-Lo.github.io/blog/2021/why-ghost/"><![CDATA[<p><em>For obvious terminology reason, I am retroactively putting the date of this post to be at Halloween. But the Halloween of 2021 also happened to be around the time I pondered and realized the answer to the question of this blogpost.</em></p>
+
+<h1 id="intro">Intro</h1>
+
+<p><a href="https://en.wikipedia.org/wiki/Gauge_theory">Gauge theory</a> is fundamental in building the Standard Model and many interesting condensed matter model. There is a gauge degree of freedom in the theory, which is just a redundancy in description, but it is needed in order to write down the theory in a manifestly Lorentz-invariant way (as all action should be).</p>
+
+<p>First, the <strong>short answer</strong> for why ghost arises in gauge theory is that <strong>we need ghosts to fix the gauge in a gauge-invariant way.</strong> At first sight this might seem paradoxical, so the goal of this post is to pinpoint exactly where ghost is needed in the formalism of gauge theories.</p>
+
+<h1 id="the-main-player-the-jacobian-determinant">The main player: the Jacobian determinant</h1>
+
+<p>We impose gauge constraints \(G_i(x_j)=0\), where \(x_i\) are the gauge degree of freedom, by inserting the Dirac delta into the $$\delta (G_i)</p>
+
+<p>Under a gauge transformation $x\rightarrow y$, this introduces a Jacobian determinant to the gauge fixing</p>
+
+\[\delta(G_i(x_j)) \rightarrow \frac{1}{det(\mathcal F_{jk})} \delta(G_i(y_k))\]
+
+<p>where \(F_{jk}= \frac{\partial y_j}{\partial x^k}\) is the Jacobian matrix that essentially describe how the differential volume element is changed after the gauge transformation. Since gauge transformation only amounts to choosing a different representative in the gauge orbit, there is no change to the physics. So we want to make sure that the gauge fixing condition is invariant under gauge transformation. Therefore, the invariant gauge fixing condition is</p>
+
+\[det(\mathcal F_{jk})\delta(G_i(y_k))\]
+
+<p>where we multiple with the Jacobian determinant to counter-balance the \(1/(\delta(G_i(y_k))\) factor from the Dirac delta term.</p>
+
+<h1 id="represent-in-terms-of-feynman-diagram">Represent in terms of Feynman diagram</h1>
+
+<p>Next, we want to represent everything in the language of Feynman diagrams, i.e. write all the terms in the partition function as a Gaussian integral. In order for the determinant factor to be expressed as an Gaussian integral, we use the following fact about multi-dimensional Grassmann integral:</p>
+
+\[\int \prod_i da_i \prod_j db_j e^{a_i D_{ij} b_j} = \det (D)\]
+
+<p>where \(a,b\) are Grassmann variables (think of them as fermionic field at the classical level). Applying this to our case, we have</p>
+
+\[\int D \bar{c}_i Dc_j e^{\bar{c}_i \mathcal{F}_{ij} c_j} = \det (\mathcal{F})\]
+
+<p>where \(c, \bar{c}\) are Grassmann-valued fields: \(c\) is the ghost and \(\bar{c}\) is the anti-ghost field. Therefore, in order to express the determinant factor as a Gaussian integral (which is necesssary for the gauge fixing condition to transform properly under gauge transformation), we are forced to introduce ghost and anti-ghost.</p>]]></content><author><name></name></author><category term="physics" /><category term="quantum-field-theory" /><category term="exposition" /><summary type="html"><![CDATA[Because it's Halloween]]></summary></entry></feed>
