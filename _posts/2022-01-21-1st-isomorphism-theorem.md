@@ -27,7 +27,7 @@ We will follow a 3-step process:
 
 ### For 1)
 
-$$\text{ker}(\Phi)=\{g\in G | \Phi(g) = e_H\}$$, where $$e_H$$ is an identity element in $$H$$. 
+$$\text{ker}(\Phi)=\\\{g\in G | \Phi(g) = e_H\\\}$$, where $$e_H$$ is an identity element in $$H$$. 
 
 
 ### For 2)
