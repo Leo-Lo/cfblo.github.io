@@ -1,6 +1,6 @@
 ---
 layout: post
-title: The first isomorphism theorem
+title: The first isomorphism theorem (incomplete)
 date: 2022-01-21
 description: probably one of the most used theorem in group theory
 tags: group-theory reference
