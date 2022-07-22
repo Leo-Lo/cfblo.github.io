@@ -2,7 +2,7 @@
 layout: post
 title: An Unconventional Way in evaluating operator-valued Gaussian integrals
 date: 2022-07-19
-description: Slogan: to hell with ordering at first, and ask for forgiveness later.
+description: To hell with ordering at first, and ask for forgiveness later.
 tags: exposition reference operator-algebra
 categories: physics math
 comments: true
