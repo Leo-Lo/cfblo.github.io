@@ -17,9 +17,9 @@ selected_papers: true # includes a list of papers marked as "selected={true}"
 social: true  # includes social icons at the bottom of the page
 ---
 
-I am an incoming physics PhD student at the Condensed Matter Theory group at Harvard University, working with Professor Ashvin Vishwanath. I am broadly interested in topological phases of matters, superconductivity, and strongly correlated electron materials. Click [here](../assets/pdf/Resume_CFBLo.pdf) for my resume.
+I am a 3rd year physics PhD student at the Condensed Matter Theory group at Harvard University, working with Professor Ashvin Vishwanath. I am broadly interested in topological phases of matters, superconductivity, and strongly correlated electron materials. Click [here](../assets/pdf/Resume_CFBLo.pdf) for my resume.
 
-When I am not doing physics (which is becoming increasingly rare!), I like playing the flute, coming up with random melodies, and biking. And here is a [random rock](https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=leolo) in our solar system.
+When I am not doing physics (which is becoming increasingly rare!), I like rock climbing, playing the flute, coming up with random melodies, and biking. And here is a [random rock](https://ssd.jpl.nasa.gov/tools/sbdb_lookup.html#/?sstr=leolo) in our solar system.
 
 
 <!-- Write your biography here. Tell the world about yourself. Link to your favorite [subreddit](http://reddit.com). You can put a picture in, too. The code is already in, just name your picture `prof_pic.jpg` and put it in the `img/` folder.
